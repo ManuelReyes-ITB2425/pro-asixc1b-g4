@@ -55,6 +55,8 @@ Per tant, hem de tenir en compte la ubicació física dels nostres servidors per
 
 Pel que fa a la sala física, hem d’aplicar mesures per dificultar la identificació i accés, millorant la seguretat. La ubicació dins de l'oficina és essencial; és preferible ubicar-lo en plantes intermèdies i evitar plantes baixes per risc d’accessos no autoritzats i evitar també plantes superiors per l’exposició a condicions ambientals adverses. A més, de no tenir cap finestra ni senyalització evident que indiquin la ubicació o situació del CPD. El disseny de la sala també és important; utilitzarem portes i parets que no es distingeixen de la resta de l'edifici. Hem d’utilitzar materials que no destaquin i que siguin resistents per mantenir la discreció i seguretat. També tindrem rutes d’accessos no evidents que no estiguin connectades amb accessos principals.
 
+![sala](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Manel/Captura%20de%20pantalla%20de%202025-05-21%2012-03-11.png) 
+
 Per un altre costat, la distribució i gestió del cablejat per als servidors físics, la seva connexió a la xarxa i als serveis al núvol requereix atenció. És important escollir el cablejat correcte. Per connexions internes dins del CPD del lloc adaptat, utilitzarem fibra òptica monomode, ideal per llargues distàncies dins del CPD. També el cablejat estructurat Cat 7 per les connexions de servidors dins de la instal·lació, assegurant velocitats de 10 Gbps.
 
 A causa de la necessitat de connectar-nos de manera fiable i eficient amb els servidors al núvol, utilitzarem una configuració de xarxa robusta. Això implica connexions a Internet d'alta capacitat i, potencialment, l'ús de tecnologies com SD-WAN o connexions dedicades als proveïdors de núvol, buscant principis similars als que oferirien les xarxes de fibra òptica submarina i el protocol MPLS en un escenari de múltiples CPDs físics internacionals (baixes latències i alta fiabilitat).
@@ -65,6 +67,7 @@ Per optimitzar la gestió del CPD, es disposarà de terra tècnic, que permetrà
 
 
 Organització cablejat:
+
 ![cables](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Manel/Captura%20de%20pantalla%20de%202025-05-21%2012-11-46.png)
 
 #
