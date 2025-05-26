@@ -524,7 +524,7 @@ També tenim la web publicada a un domini públic.
 El servei tracta de donar allotjament a pàgines webs, per fer això hem utilitzat l’eina nginx que comporta d’una configuració bàsica per a la connexió http i també una configuració per a https amb el nostre certificat.
 A més, hem dissenyat la nostra pàgina web.
 També tenim la web publicada a un domini públic. 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg/330px-The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg)
+![]()
 **BBDD**
 
 Per la base de dades hem utilitzat MySQL Workbench, cosa que ens permet una fàcil gestió de totes les nostres dades.
