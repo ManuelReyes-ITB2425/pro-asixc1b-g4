@@ -44,7 +44,7 @@ tecnològica.
 
 #
 
-# 1 Proposta de CPD**
+# 1 Proposta de CPD
 
 ## 1.1 Ubicació física
 
