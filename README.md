@@ -65,7 +65,7 @@ Per optimitzar la gestió del CPD, es disposarà de terra tècnic, que permetrà
 
 
 Organització cablejat:
-
+![cables](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Manel/Captura%20de%20pantalla%20de%202025-05-21%2012-11-46.png)
 
 #
 
