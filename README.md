@@ -154,7 +154,7 @@ La nostra infraestructura està formada per tres racks interconnectats. Cada rac
 
 Els cables verds indiquen les connexions entre els servidors i els patch panels, mentre que els cables blaus mostren les interconnexions entre els diferents patch panels, que permeten establir comunicació entre els tres racks. Aquestes connexions acaben centralitzant-se al switch. El router, connectat a aquest, és l’encarregat de facilitar la connexió amb xarxes externes.
 
-
+![Rack](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%20202)
 #
 
 ## 1.3 Infraestructura elèctrica
