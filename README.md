@@ -566,3 +566,8 @@ Totes les zones estan configurades amb les IPs públiques corresponents.
 **SFTP**
 
 Oferim el servei de SFTP per la transferència d’arxius de forma segura. Creem els usuaris necessaris per als usuaris que ho utilitzaran i donem aquest servei utilitzant SolarWinds.
+![usuaris]()
+![usuaris]()
+![usuaris]()
+![usuaris]()
+![usuaris]()
