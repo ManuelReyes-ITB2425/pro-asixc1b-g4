@@ -597,13 +597,40 @@ Comprovació que des d'un client puc veure la Base de dades i Administrar-la.
 
 **Monitoratge**
 
-Per al monitoratge hem utilitzat el paquet ELK Stack (Elastic + Kibana) + Metricbeat i per el monitoratge d'usuaris hem utilitzat Veyon, compartint la nostra clau publica.
-
-**ELK Stack**
-![ELk](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/ddcb019313d9a1b851ef32203447dce763af1c34/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-20-24.png)
+Per al monitoratge dels nostres equips Linux i Windows utilitzarem Veyon, i per monitoritzar els recursos del servidor utiltizarem ELK Stack + Metricbeat.
 
 **Veyon**
+El primer pas per monitoritzar és descarregar-se el programa Veyon i configurar-lo, per començar hem de seleccionar l'opció d'utilitzar claus.
+![monitoratge1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-44-49.png)
+
+El següent pas és crear el parell de claus.
+
+![monitoratge2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-45-45.png)
+
+I la clau pública la passem a totes les màquines que vulguem monitoritzar i aquestes l'hauran d'importar.
+![monitoratge3](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-46-02.png)
+
+Ja per últim afegim la mateixa ubicació que a la màquina en la qual vam crear les claus i ja estaria per part del client.
+
+Ara només quedaria anar a la màquina servidor i afegir l'ordinador a 'Locations & computers'.
+![monitoratge4](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-46-22.png)
+
+Aquet seria el resultat
 ![ELk](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/1678644591a85a6fb9588d2c29d9ca4d780054f4/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-29-26.png)
+
+**ELK Stack**
+El primer pas és instal·lar Elasticsearch i Kibana, i després configurar els seus fitxers perquè es puguin comunicar entre si i siguin accessibles des de qualsevol ordinador.
+Arxiu de configuracio de Elastic
+![ELk1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/f1560425c2096285feeb0dab17af6d7090c060b1/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-44-15.png)
+Arxiu de configuracio de Kibana
+![ELk2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/cf509e1a35d490e91db432af415aa8a46c33960b/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-46-26.png)
+Despres executem el setup del Metricbeat i li cambien la configuracio.
+![ELk3](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/d4a5757feb93676803662352ca79c6ab67bd0812/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-47-50.png)
+
+![ELk4](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/4b9eccf8130330bf9359efda9e5696e8ca18ee81/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-51-03.png)
+
+Si tot ha surtit bé hauriem de poder accedir a Metricbeat dins de Kibana
+![ELk](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/ddcb019313d9a1b851ef32203447dce763af1c34/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-20-24.png)
 
 **Active Directory**
 
