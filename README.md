@@ -351,6 +351,7 @@ Per als tallafocs (o firewalls), utilitzarem OPNsense, el qual és un tallafoc q
 **Monitoratge**
 
 Per al monitoratge dels nostres equips Linux i Windows utilitzarem Veyon, que és un programari que permet monitorar fàcilment múltiples usuaris alhora i fins i tot controlar els ordinadors o bloquejar-los i per a monitoritzar els recursos del sistema utilitzarem ELK Stack + Metricbeat.
+
 **Còpies de seguretat / Backups**
 
 Per a les còpies de seguretat de Linux es poden fer servir scripts i l'ús de comandes com ara “tar” i en quant a Windows, l'ús de Windows Server Backup més scripts permet fer còpies de seguretat i passar-les a altres màquines. El destí de les còpies serà el QNAP TS-453D; aquest servidor està fora de l'edifici de l'empresa per garantir una major seguretat i, depenent de la volatilitat de les dades, es faran més o menys còpies incrementals.
