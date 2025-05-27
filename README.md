@@ -164,11 +164,11 @@ La infraestructura elèctrica del nostre Centre de Processament de Dades ha esta
 
 La infraestructura elèctrica del nostre Centre de Processament de Dades (CPD) ha estat meticulosament dissenyada per assegurar un alt nivell de disponibilitat, continuïtat de servei i eficiència energètica, adaptant-se a les necessitats operatives actuals i preveient l'escalabilitat futura. El disseny fonamental es basa en la redundància de les fonts d'alimentació principals i la protecció mitjançant Sistemes d'Alimentació Ininterrompuda (SAI) per als equips de Tecnologies de la Informació (TI) i sistemes crítics auxiliars.
 
-**2\. Sistema de Subministrament Elèctric Principal:**
+**2/. Sistema de Subministrament Elèctric Principal:**
 
 Cada seu física del CPD compta amb una instal·lació elèctrica robusta, alimentada per dues acometides elèctriques independents (Feed A i Feed B) provinents de la xarxa pública. Aquestes acometides alimenten un Cuadro General de Distribución (CGD) central, que actua com a nucli per a la distribució de l'energia dins de les instal·lacions. Aquesta configuració de doble acometida minimitza el risc d'interrupcions totals del servei degudes a fallades en una de les línies de subministrament extern.
 
-**3\. Línies d'Alimentació Redundants (Línia A i Línea B) i Sistemes SAI:**
+**3/. Línies d'Alimentació Redundants (Línia A i Línea B) i Sistemes SAI:**
 
 Des del CGD, l'energia es canalitza cap a dos circuits elèctrics principals i independents, denominats Línia A i Línia B. Cada una d'aquestes línies alimenta un Sistema d'Alimentació Ininterrompuda (SAI) dedicat (SAI A i SAI B). Aquests SAIs estan dimensionats per:
   
@@ -196,7 +196,7 @@ Per al dimensionament adequat dels Sistemes d'Alimentació Ininterrompuda (SAI),
   - Càrrega per al SAI A (via PSU1): 90 Watts
   - Càrrega per al SAI B (via PSU2): 90 Watts
 
-**2. Servidor Dell PowerEdge R250 (FTP + DNS Primari)**
+**Servidor Dell PowerEdge R250 (FTP + DNS Primari)**
 
 - Consum Màxim Teòric del Servidor: S'estableix en 200 Watts. Factor de Carga Operativa Estimada (FCOE): 50% (0.50). Aquest factor es justifica per:
   - Els serveis d'FTP i DNS Primari tenen una demanda de recursos generalment moderada.
@@ -206,7 +206,7 @@ Per al dimensionament adequat dels Sistemes d'Alimentació Ininterrompuda (SAI),
 - Distribució als SAIs: El R250 compta amb una única font d'alimentació.
   - Càrrega per al SAI A: 100 Watts
   
-**3. Servidor Lenovo ThinkSystem SR630 (Audio + Streaming + Web)**
+**Servidor Lenovo ThinkSystem SR630 (Audio + Streaming + Web)**
 
 - Consum Màxim Teòric del Servidor: S'estableix en 250 Watts. Factor de Carga Operativa Estimada (FCOE): 70% (0.70). Aquest factor es justifica per:
   - La potencial alta demanda dels serveis de streaming i web, que podrien requerir un percentatge significatiu dels recursos del servidor de forma sostinguda.
@@ -215,7 +215,181 @@ Per al dimensionament adequat dels Sistemes d'Alimentació Ininterrompuda (SAI),
 - Distribució als SAIs: S'ha definit que el SR630 comptarà amb una única font d'alimentació.
   - Càrrega per al SAI B: 175 Watts
 
+**Switch HPE Aruba 2930F 24G PoE+**
 
+- Consum Màxim Teòric del Switch (sense lliurar PoE): S'estableix en 75 Watts. Aquest valor s'obté de les especificacions del fabricant, restant la potència total PoE (370W) del consum màxim total d'energia del switch (445W), resultant en el consum màxim de l'electrònica pròpia del switch.
+- Factor de Carga Operativa Estimada (FCOE): 80% (0.80). Aquest factor es justifica per:
+  - El switch estarà gestionant tot el tràfic de xarxa dels servidors i altres dispositius connectats, requerint un alt percentatge de la seva capacitat operativa de forma contínua.
+  - No es considera càrrega PoE crítica a alimentar per aquest switch durant la contingència.
+- Càlcul del Consum Operatiu:\
+  Consum\_Operatiu\_Switch = 75 W \* 0.80 = 60 Watts
+- Distribució als SAIs: El switch compta amb una única font d'alimentació.
+  - Càrrega per al SAI A: 60 Watts
+
+**Router (Ubiquiti EdgeRouter 4 - ER-4)**
+
+- Consum Màxim Teòric del Router: S'estableix en 13 Watts, segons les especificacions oficials del fabricant per al model ER-4.
+- Factor de Carga Operativa Estimada (FCOE): 80% (0.80). Similar al switch, el router gestionarà tràfic de xarxa de forma contínua, incloent la connexió a Internet i la intercomunicació entre xarxes si s'escau.
+- Càlcul del Consum Operatiu:\
+  Consum\_Operatiu\_Router = 13 W \* 0.80 = 10.4 Watts\
+  Arrodonit a: 11 Watts (per a una xifra més pràctica).
+- Distribució als SAIs: El router compta amb una única font d'alimentació.
+  - Càrrega per al SAI B: 11 Watts
+
+**Resum Final de Càrregues Estimades per SAI:**
+
+- **SAI A:**
+  - Del Servidor R550 (PSU1): 90 W
+  - Del Servidor R250: 100 W
+  - Del Switch HPE Aruba: 60 W
+  - Total Càrrega Estimada SAI A = 90 + 100 + 60 = 250 Watts
+- **SAI B:**
+  - Del Servidor R550 (PSU2): 90 W
+  - Del Servidor SR630 (1 PSU): 175 W
+  - Del Router Ubiquiti ER-4: 11 W
+  - Total Càrrega Estimada SAI B = 90 + 175 + 11 = 276 Watts
+
+A continuació, seguirem amb una taula per després procedir amb els càlculs per aconseguir el temps d’autonomia desitjat.
+
+**Fase 1: Taula Consolidada de Paràmetres per al Càlcul Teòric d'Autonomia**
+
+Aquesta taula resumirà totes les dades que hem recopilat pel  càlcul final.
+
+**Taula de Paràmetres per al Càlcul Teòric d'Autonomia del SAI APC SMTL1500RMI3UC**
+
+|**Paràmetre**|**Símbol**|**Valor Asignat**|**Unitats**|**Font / Mètode d'Obtenció o Estimació**|
+| :- | :- | :- | :- | :- |
+|**Càrregues de Disseny (amb marge de seguretat del 25%)**|||||
+|Potència Càrrega SAI A|P\_L\_SAI\_A|312\.5|W|Consum total estimat dels equips connectats al SAI A (250W) + 25% marge.|
+|Potència Càrrega SAI B|P\_L\_SAI\_B|345|W|Consum total estimat dels equips connectats al SAI B (276W) + 25% marge.|
+|**Paràmetres Estimats de la Bateria i SAI**||||Estimacions per al model APC SMTL1500RMI3UC|
+|Voltatge Nominal Total del Banc de Bateries|V\_b\_total|48|V|Estimació basada en models de SAIs de liti-ió APC similars en aquest rang de potència.|
+|Eficiència de l'Inversor (mode bateria)|η\_inv|0\.90|(0-1)|Estimació conservadora per a un SAI Line Interactive modern amb tecnologia de liti, considerant pèrdues en la conversió DC-AC.|
+|Factor de Peukert (Liti-ió, descàrrega ràpida)|f\_p(I\_d)|0\.95|(<=1)|Estimació per a bateries de liti-ió, reflectint una pèrdua de capacitat del 5% a altes taxes de descàrrega. L'efecte Peukert és menor que en plom-àcid.|
+|**Dada de Referència del Fabricant (per calibració)**|||||
+|Potència de Càrrega de Referència (Fabricant)|P\_L\_ref|350|W|Punt extret del gràfic d'autonomia d'APC per a l'SMTL1500RMI3UC.|
+|Temps d'Autonomia de Referència (Fabricant)|t\_a\_ref|21 min 50 seg|min|Punt extret del gràfic d'autonomia d'APC per a l'SMTL1500RMI3UC (equivalent a 0.4167 hores).|
+|**Paràmetres de Disseny Operatiu (Definits pel Projecte)**|||||
+|Profunditat de Descàrrega (DoD) permesa|DoD|0\.90|(0-1)|Decisió de disseny per optimitzar la longevitat de la bateria de liti.|
+|Factor de Temperatura|f\_t(T)|1\.0||Assumint operació del CPD en condicions de temperatura òptimes (20-25°C).|
+|Factor d'Envelliment (SAI nou)|f\_e|1\.0|(<=1)|Càlcul per a un SAI nou amb bateries a la seva capacitat inicial.|
+|Factor d'Eficiència del Cablejat Intern DC|f\_c|0\.99|(<=1)|Estimació per a pèrdues mínimes (1%) en el circuit de corrent continu intern del SAI.|
+|**Valor Calculat (Derivat)**|||||
+|Capacitat Nominal Estimada de la Bateria|C\_n|3\.10 Ah|Ah|Calculada a partir de E\_lliurada\_ref i els paràmetres estimats (V\_b\_total, η\_inv, f\_p(I\_d)). Veure detall del càlcul a la Fase 2.|
+|Energia Nominal Estimada del Banc (C\_n\*V\_b\_total)|E\_bat\_nom|48V|Wh|Producte de C\_n estimada i V\_b\_total estimada.|
+
+**Fase 2: Justificació i Càlcul Detallat dels Paràmetres**
+
+**Introducció al Càlcul Teòric:**\
+L'objectiu d'aquest apartat és realitzar un càlcul teòric detallat per determinar l'autonomia esperada del SAI APC SMTL1500RMI3UC. Per a això, s'utilitzarà la fórmula general de descàrrega de bateries, desglossant i justificant cada paràmetre. Atès que el fabricant no proporciona directament tots els valors interns de la bateria (com la capacitat en Ah), es realitzarà una estimació d'aquests a partir de dades de rendiment publicades.
+
+La fórmula general per al temps d'autonomia (t\_a) en hores és:
+
+t\_a = (C\_n \* V\_b\_total \* η\_inv \* DoD \* f\_p(I\_d) \* f\_t(T) \* f\_e \* f\_c) / P\_L
+
+**Desglossament i Obtenció de Paràmetres:**
+
+- ` `**(Potència de la Càrrega):** Les potències de disseny són P\_L\_SAI\_A = 312.5 W i P\_L\_SAI\_B = 345 W. Aquests valors representen la càrrega operativa màxima esperada per a cada SAI, incloent un marge de seguretat del 25% sobre el consum estimat dels equips connectats. Aquest marge preveu possibles pics de consum i un creixement futur moderat.
+- **Estimació de V\_b\_total (Voltatge Nominal del Banc de Bateries):**\
+  El datasheet de l'SMTL1500RMI3UC no especifica directament el voltatge del seu banc intern de bateries de liti-ió. Basant-se en l'anàlisi de productes similars d'APC dins de la mateixa família Smart-UPS Lithium-ion i rang de potència (750VA-1500VA), s'observa que un voltatge de sistema de **48V** és una configuració comuna. Per tant, s'adopta V\_b\_total = 48V com una estimació fonamentada per a aquest model.
+- **Estimació de η\_inv (Eficiència de l'Inversor en Mode Bateria):**\
+  L'eficiència de conversió DC-AC de l'inversor quan opera en mode bateria és un factor crucial. Els SAIs Line Interactive moderns amb components d'alta qualitat, especialment aquells amb bateries de liti, solen presentar bones eficiències. En absència d'una corba d'eficiència específica per al mode bateria al datasheet, s'estima una eficiència del **90% (0.90)**. Aquesta xifra es considera una estimació realista i lleugerament conservadora, tenint en compte les pèrdues presents al procés de conversió d'energia.
+- **Estimació de f\_p(I\_d) (Factor de Peukert per a Liti-ió):**\
+  L'efecte Peukert descriu la reducció de la capacitat efectiva d'una bateria a mesura que augmenta la taxa de descàrrega. Per a les bateries de liti-ió, aquest efecte és significativament menys pronunciat que per a les tradicionals de plom-àcid. Per a les taxes de descàrrega associades a autonomies en el rang de 15-60 minuts, s'estima un factor de Peukert de **0.95**. Això implica que s'espera poder utilitzar el 95% de la capacitat nominal de la bateria sota aquestes condicions, reflectint una pèrdua de només el 5% deguda a la rapidesa de la descàrrega.
+- **Càlcul de C\_n (Capacitat Nominal Estimada de la Bateria):**
+
+  ![](**\
+  Per estimar C\_n, s'utilitzarà un punt de referència del gràfic d'autonomia proporcionat per APC per a l'SMTL1500RMI3UC: a una càrrega de P\_L\_ref = 350W, el SAI ofereix una autonomia de t\_a\_ref = 21 minuts 50 segons.
+
+  Convertim t\_a\_ref a hores: 21 minuts + (50/60) minuts = 21.8333 minuts.
+
+  t\_a\_ref\_hores = 21.8333 / 60 ≈ 0.36388 hores. L'energia lliurada a la càrrega en aquest punt (E\_lliurada\_ref) és: 
+
+  E\_lliurada\_ref = P\_L\_ref \* t\_a\_ref\_hores = 350 W \* 0.36388 h ≈ 127.358 Wh.
+
+  Aquesta energia lliurada és el resultat de l'energia nominal de la bateria afectada per l'eficiència de l'inversor i l'efecte Peukert (assumint que els altres factors com DoD, ja considerats pel fabricant en aquest punt de referència per a una bateria nova).\
+  L'energia nominal del banc de bateries (E\_bat\_nom = C\_n \* V\_b\_total) es pot estimar com:\
+  E\_bat\_nom = E\_lliurada\_ref / (η\_inv \* f\_p(I\_d))
+
+  E\_bat\_nom = 127.358 Wh / (0.90 \* 0.95) = 127.358 Wh / 0.855 ≈ 148.957 Wh. \
+  Amb el V\_b\_total estimat de 48V, la capacitat nominal C\_n es calcula com:\
+  C\_n = E\_bat\_nom / V\_b\_total = 148.957 Wh / 48V ≈ \*\*3.103 Ah\*\*.
+
+  Arrodonim C\_n a **3.10 Ah** per als càlculs següents.\
+  Aquesta C\_n de 3.10 Ah és la capacitat nominal estimada del banc de bateries de 48V que, sota les eficiències i factors estimats, pot lliurar l'autonomia especificada pel fabricant. 
+
+  Llavors, E\_bat\_nom recalculat amb C\_n arrodonit: 3.10 Ah \* 48V = 148.8 Wh.
+
+- ` `**(Profunditat de Descàrrega Operativa):** Per a aquest projecte, s'estableix un DoD màxim del **90% (0.9)**. Aquesta és una decisió de disseny per no portar la bateria al seu límit absolut de descàrrega en cada cicle, buscant un equilibri entre l'aprofitament de l'energia i la promoció d'una vida útil més llarga, tot i que les bateries de liti-ió són robustes davant descàrregues profundes.
+- Com s'ha detallat a la taula, s'assignen valors d'**1.0**, **1.0** i **0.99** respectivament, reflectint condicions operatives òptimes, un SAI nou i pèrdues mínimes per cablejat intern.
+
+**Fase 3: Càlcul Teòric Manual de l'Autonomia**
+
+Ara, amb tots els paràmetres definits i justificats, procedim a calcular l'energia neta lliurable i, posteriorment, el temps d'autonomia.
+
+**1. Càlcul de l'Energia Neta Lliurable Planificada**\
+Aquest valor representa l'energia total en Watt-hores que s'espera que el SAI pugui lliurar a la càrrega, considerant tots els factors:\
+E\_neta\_lliurable\_Wh = C\_n \* V\_b\_total \* η\_inv \* DoD \* f\_p(I\_d) \* f\_t(T) \* f\_e \* f\_c
+
+Utilitzant C\_n = 3.10 Ah i V\_b\_total = 48V (que dóna E\_bat\_nom = 148.8 Wh):
+
+E\_neta\_lliurable\_Wh = (3.10 Ah) \* (48 V) \* (0.90) \* (0.90) \* (0.95) \* (1.0) \* (1.0) \* (0.99)
+
+E\_neta\_lliurable\_Wh = (148.8 Wh) \* (0.90) \* (0.90) \* (0.95) \* (1.0) \* (1.0) \* (0.99)
+
+Calculem pas a pas:
+
+- Energia Nominal de la Bateria: E\_bat\_nom = 148.8 Wh
+- Energia després de l'eficiència de l'inversor: 148.8 Wh \* 0.90 = 133.92 Wh
+- Energia després del DoD: 133.92 Wh \* 0.90 = 120.528 Wh
+- Energia després del factor de Peukert: 120.528 Wh \* 0.95 = 114.5016 Wh
+- Energia després del factor de temperatura (1.0) i envelliment (1.0): Es manté en 114.5016 Wh
+- Energia final després de pèrdues de cablejat: 114.5016 Wh \* 0.99 ≈ \*\*113.36 Wh\*\*
+
+Per tant, E\_neta\_lliurable\_Wh ≈ 113.36 Wh.
+
+
+**Càlcul Final del Temps d'Autonomia Teòric**
+
+- **Per al SAI A (P\_L\_SAI\_A = 312.5 W):**\
+  t\_a\_SAI\_A [hores] = E\_neta\_lliurable\_Wh / P\_L\_SAI\_A\
+  t\_a\_SAI\_A [hores] = 113.36 Wh / 312.5 W ≈ 0.36275 hores\
+  Per convertir a minuts: 0.36275 hores \* 60 minuts/hora ≈ \*\*21.77 minuts\*\*
+- **Per al SAI B (**\
+  t\_a\_SAI\_B [hores] = E\_neta\_lliurable\_Wh / P\_L\_SAI\_B\
+  t\_a\_SAI\_B [hores] = 113.36 Wh / 345 W ≈ 0.32858 hores\
+  Per convertir a minuts: 0.32858 hores \* 60 minuts/hora ≈ \*\*19.71 minuts\*\*
+
+**Resultats del Càlcul Teòric Manual Complet:**\
+L'anàlisi teòrica detallada, amb el punt de calibració corregit, projecta una autonomia de **21.77 minuts** per al SAI A i **19.71 minuts** per al SAI B.
+
+**Fase 4: Comparació amb les Dades del Fabricant i Conclusió Final**
+
+**Autonomia Segons Dades del Fabricant (Gràfic/Taula d'Autonomia APC SMTL1500RMI3UC):**
+
+- Per a SAI A (312.5 W): Interpolant entre 300W (25 min 25 seg ≈ 25.42 min) i 400W (19 min 7 seg ≈ 19.12 min).\
+  La càrrega de 312.5W està al 12.5% del camí entre 300W i 400W.\
+  25.42 min - ( (25.42 - 19.12) \* 0.125 ) = 25.42 min - (6.3 \* 0.125) = 25.42 - 0.7875 ≈ \*\*24.63 minuts\*\*.
+- Per a SAI B (345 W): Interpolant entre 300W (25.42 min) i 400W (19.12 min).\
+  La càrrega de 345W està al 45% del camí entre 300W i 400W.\
+  25.42 min - ( (25.42 - 19.12) \* 0.45 ) = 25.42 min - (6.3 \* 0.45) = 25.42 - 2.835 ≈ \*\*22.59 minuts\*\*.
+
+**Anàlisi Comparativa dels Resultats:**
+
+|Identificador SAI|Càrrega de Disseny (W)|Autonomia - Càlcul Teòric Manual (min)|Autonomia - Dades Fabricant (min)|Diferència (Manual vs. Fabricant)|
+| :- | :- | :- | :- | :- |
+|SAI A|312\.5|21\.77|~24.63|-2.86 min|
+|SAI B|345|19\.71|~22.59|-2.88 min|
+
+**Anàlisi de les Diferències:**\
+La diferència (el nostre càlcul és uns 2.8 minuts més curt) pot ser deguda a:
+
+1. **Conservadorisme en les Estimacions:** Els nostres factors estimats (η\_inv = 0.90, f\_p = 0.95) podrien ser lleugerament més pessimistes que el rendiment real del SAI en aquests punts de càrrega. Si l'eficiència real de l'inversor fos, per exemple, del 92% en lloc del 90%, o el factor Peukert fos 0.97 en lloc de 0.95, això augmentaria l'energia nominal calculada (E\_bat\_nom) i, per tant, l'autonomia final.
+1. **Punt de Calibració i No Linealitats:** Vam utilitzar el punt de 350W (21 min 50 seg) per estimar C\_n. Aquesta és només *una* taxa de descàrrega. Com vam veure, l'energia total lliurable canvia amb la taxa. És possible que el nostre mètode de "calibració" i aplicació de factors constants no reflecteixi perfectament el comportament a 312.5W i 345W.
+1. **DoD Aplicat:** El nostre DoD = 0.90 és una decisió de disseny. El fabricant potser considera un aprofitament lleugerament superior de la bateria en els seus gràfics d'autonomia per a bateries noves.
+
+   **Conclusió Final**\
+   L'exercici de càlcul teòric manual, amb el punt de calibració corregit (350W - 21 min 50 seg), ha proporcionat estimacions d'autonomia de **21.77 minuts** per al SAI A i **19.71 minuts** per al SAI B. Aquests valors són coherents i lleugerament inferiors als derivats directament del gràfic del fabricant (aproximadament 24.63 min i 22.59 min, respectivament).
 
 **4\. Distribució d'Energia als Racks (PDUs):**
 
