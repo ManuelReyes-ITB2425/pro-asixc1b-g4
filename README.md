@@ -279,7 +279,6 @@ El CPD estarà monitoritzat en tot moment amb un sistema CCTV d’alta resoluci�
 - Entrades i sortides.
   - Zones interiors del CPD.
   - Passadissos d’accés restringit.
-- Accés remot encriptat a les càmeres per supervisió des de fora del recinte.
 - Senyalització clara de zona videovigilada (complint la normativa de protecció de dades).
 
 ![camara360](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/camara360.png)
