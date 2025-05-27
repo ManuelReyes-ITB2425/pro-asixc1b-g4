@@ -545,7 +545,7 @@ Disseny de la nostra pàgina web i clients del nostre servei.
 Visio de la web: 
 ![Web IP](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Captura%20de%20pantalla%20de%202025-05-23%2008-33-48.png)
 
-També tenim la web publicada a un domini públic. 
+També tenim la web publicada utilitzant el nostre DNS. 
 ![Web DNS](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Captura%20de%20pantalla%20de%202025-05-23%2008-34-41.png)
 
 **BBDD**
