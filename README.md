@@ -353,6 +353,7 @@ Per als tallafocs (o firewalls), utilitzarem OPNsense, el qual és un tallafoc q
 Per al monitoratge dels nostres equips Linux i Windows utilitzarem Veyon, que és un programari que permet monitorar fàcilment múltiples usuaris alhora i fins i tot controlar els ordinadors o bloquejar-los.
 
 El primer pas per monitoritzar és descarregar-se el programa Veyon i configurar-lo, per començar hem de seleccionar l'opció d'utilitzar claus.
+
 ![monitoratge1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-44-49.png)
 
 El següent pas és crear el parell de claus.
@@ -601,6 +602,7 @@ Per al monitoratge dels nostres equips Linux i Windows utilitzarem Veyon, i per 
 
 **Veyon**
 El primer pas per monitoritzar és descarregar-se el programa Veyon i configurar-lo, per començar hem de seleccionar l'opció d'utilitzar claus.
+
 ![monitoratge1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-44-49.png)
 
 El següent pas és crear el parell de claus.
@@ -661,6 +663,7 @@ També el client hem instal·lat RSAT per a poder administrar el servidor que es
 
 Al DNS tenim la zona del domini i també les dels serveis web d'àudio i de vídeo.
 
+![DNS](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/9eb38b4a75ae0ae7dd3fbd2d5492ddd3b1d33996/proyecto/Fotos/serveis/DNS/Captura%20de%20pantalla%20de%202025-05-27%2011-57-59.png)
 
 Totes les zones estan configurades amb les IPs públiques corresponents.
 
