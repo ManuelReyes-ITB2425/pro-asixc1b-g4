@@ -392,6 +392,7 @@ Aquí està l'altre RAID 10 del servidor d'Àudio i streaming que són 2 dels no
 **RAID 1:**
 
 El RAID 1 és tan senzill com disposar de dos discs i, des del gestor de discos de Windows, crear un volum reflectit.
+
 ![raid1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/8cb00f8999edea2ef9c4e812c92c4b38dd6c9a90/proyecto/Fotos/part%20teorica/Mario/RAID1.png)
 
 **Prevenció de riscos laborals:**
