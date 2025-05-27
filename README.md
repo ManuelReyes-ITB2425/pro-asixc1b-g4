@@ -426,7 +426,7 @@ Per optimitzar la gestió i seguretat del CPD, s'implementarà:
 - **Etiquetatge Exhaustiu:** De tots els components elèctrics i de cablejat per facilitar la identificació, el manteniment i la resolució d'incidències.
 - **Racks Tancats:** Per millorar la seguretat física, el control ambiental i l'eficiència de la refrigeració.
 
-[Enllaç](https://drive.google.com/file/d/1eCAv05kAge5WRgztfIPfRZaM4Xw61cSj/view?usp=sharing) al diagrama del mapa elèctric
+[Enllaç diagrama elèctric - pàgina web interactiva](https://gersoninteriano.github.io/diagrama-infraestructura-el-ctrica/)
 
 ## 1.4 Seguretat Física
 
