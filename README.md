@@ -298,7 +298,7 @@ t\_a = (C\_n \* V\_b\_total \* η\_inv \* DoD \* f\_p(I\_d) \* f\_t(T) \* f\_e \
   L'efecte Peukert descriu la reducció de la capacitat efectiva d'una bateria a mesura que augmenta la taxa de descàrrega. Per a les bateries de liti-ió, aquest efecte és significativament menys pronunciat que per a les tradicionals de plom-àcid. Per a les taxes de descàrrega associades a autonomies en el rang de 15-60 minuts, s'estima un factor de Peukert de **0.95**. Això implica que s'espera poder utilitzar el 95% de la capacitat nominal de la bateria sota aquestes condicions, reflectint una pèrdua de només el 5% deguda a la rapidesa de la descàrrega.
 - **Càlcul de C\_n (Capacitat Nominal Estimada de la Bateria):**
 
-  ![](**\
+  ![](proyecto/Fotos/part teorica/Gerson/image (1).png)**\
   Per estimar C\_n, s'utilitzarà un punt de referència del gràfic d'autonomia proporcionat per APC per a l'SMTL1500RMI3UC: a una càrrega de P\_L\_ref = 350W, el SAI ofereix una autonomia de t\_a\_ref = 21 minuts 50 segons.
 
   Convertim t\_a\_ref a hores: 21 minuts + (50/60) minuts = 21.8333 minuts.
