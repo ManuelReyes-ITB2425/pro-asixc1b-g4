@@ -14,35 +14,26 @@
 
 [**2 Serveis 27**](#_vt3rt4lbkp18)
 
-# Objectius del projecte
-
-● Dissenyar i implementar una infraestructura tecnològica de CPD eficient, segura i
-
-sostenible.
-
-● Implementar una arquitectura de sistemes i comunicacions que donin suport als
-
-requeriments de negoci definits.
-
-● Garantir la qualitat del servei de transmissió d'àudio i vídeo amb proves d'amplada
-
-de banda realitzades.
-
-● Protegir les dades de clients i usuaris segons les normatives internacionals de
-
-seguretat.
-
-● Optimitzar l'ús de recursos i minimitzar l'impacte ambiental de la infraestructura
-
-tecnològica.
-
-● Calcular la petjada ecològica de diferents processos.
-
-● Realització de documentació en format markdown publicat al github.
 
 # Resum del projecte
+InnovateTech és una empresa especialitzada en la creació i distribució de contingut digital que vol desenvolupar una arquitectura de Centre de Processament de Dades al núvol. L’objectiu principal és disposar d’una infraestructura tecnològica moderna, segura i sostenible, capaç de donar suport als serveis web i a la transmissió d’àudio i vídeo de manera eficient.
 
-#
+El projecte s’alinea amb els Objectius de Desenvolupament Sostenible de l’Agenda 2030, apostant per l’ús d’energies renovables, la reducció de l’impacte ambiental i la protecció de dades.
+
+**Objectius concrets:**
+
+* Dissenyar un CPD al núvol eficient, destral i amb baix impacti ambiental.
+
+* Donar suport als necessitats actuals i futures del negoci.
+
+* Garantir la qualitat del servei multimèdia amb anàlisi de l’amplada de banda.
+
+* Complir amb les normatives internacionals de seguretat de dades.
+
+* Optimitzar l’ús de recursos i calcular la petjada ecològica.
+
+* Documentar el projecte en format Markdown i publicar-la GitHub.
+
 
 # 1 Proposta de CPD
 
