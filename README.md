@@ -621,15 +621,21 @@ Aquet seria el resultat
 **ELK Stack**
 El primer pas és instal·lar Elasticsearch i Kibana, i després configurar els seus fitxers perquè es puguin comunicar entre si i siguin accessibles des de qualsevol ordinador.
 Arxiu de configuracio de Elastic
+
 ![ELk1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/f1560425c2096285feeb0dab17af6d7090c060b1/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-44-15.png)
+
 Arxiu de configuracio de Kibana
+
 ![ELk2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/cf509e1a35d490e91db432af415aa8a46c33960b/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-46-26.png)
+
 Despres executem el setup del Metricbeat i li cambien la configuracio.
+
 ![ELk3](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/d4a5757feb93676803662352ca79c6ab67bd0812/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-47-50.png)
 
 ![ELk4](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/4b9eccf8130330bf9359efda9e5696e8ca18ee81/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-51-03.png)
 
 Si tot ha surtit bé hauriem de poder accedir a Metricbeat dins de Kibana
+
 ![ELk](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/ddcb019313d9a1b851ef32203447dce763af1c34/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-20-24.png)
 
 **Active Directory**
