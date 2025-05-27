@@ -559,19 +559,19 @@ Servidor _“iperf3 -s”_, client _“iperf3 -c 52.202.226.208”_
 
 **Web** 
 
-El servei tracta de donar allotjament a pàgines webs, per fer això hem utilitzat l’eina nginx que comporta d’una configuració bàsica per a la connexió http i també una configuració per a https amb el nostre certificat.
+El servei tracta de donar allotjament a pàgines web, per fer això hem utilitzat l’eina nginx que comporta d’una configuració bàsica per a la connexió http i també una configuració per a https amb el nostre certificat.
 
 ![Conf. http](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Captura%20de%20pantalla%20de%202025-05-22%2010-19-30.png)
 ![Conf. https](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Captura%20de%20pantalla%20de%202025-05-22%2010-20-26.png)
 
-Visio del certificat: 
+Visió del certificat: 
 ![Cert. 1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Captura%20de%20pantalla%20de%202025-05-22%2010-07-07.png)
 ![Cert. 2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Captura%20de%20pantalla%20de%202025-05-22%2010-10-44.png)
 
 Disseny de la nostra pàgina web i clients del nostre servei.
 ![Index.html](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Captura%20de%20pantalla%20de%202025-05-22%2010-26-32.png)
 
-Visio de la web: 
+Visió de la web: 
 ![Web IP](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Captura%20de%20pantalla%20de%202025-05-23%2008-33-48.png)
 
 També tenim la web publicada utilitzant el nostre DNS. 
