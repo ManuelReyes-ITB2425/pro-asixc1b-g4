@@ -359,6 +359,7 @@ El primer pas per monitoritzar és descarregar-se el programa Veyon i configurar
 ![monitoratge1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-44-49.png)
 
 El següent pas és crear el parell de claus.
+
 ![monitoratge2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-45-45.png)
 
 I la clau pública la passem a totes les màquines que vulguem monitoritzar i aquestes l'hauran d'importar.
