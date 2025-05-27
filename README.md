@@ -574,12 +574,15 @@ També tenim la web publicada utilitzant el nostre DNS.
 **BBDD**
 
 Per a la base de dades, hem fet servir MySQL Workbench, que ens facilita la gestió de totes les nostres dades, i phpMyAdmin per accedir-hi des de qualsevol dispositiu.
+
 ![BD1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/BBDD/Captura%20de%20pantalla%20de%202025-05-26%2008-59-52.png)
 
 Totes les nostres taules tenen una gran quantitat de dades
+
 ![BD2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/BBDD/Captura%20de%20pantalla%20de%202025-05-26%2009-00-03.png)
 
 Hem afegit totes les relacions segons aquest esquema i tenint en compte que codi_departament i codi_nivell són claus foranes.
+
 ![BD3](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/BBDD/Captura%20de%20pantalla%20de%202025-05-26%2009-00-16.png)
 
 Comprovació que des d'un client puc veure la Base de dades i Administrar-la.
