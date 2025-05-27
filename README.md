@@ -1,3 +1,10 @@
+PROJECTE TRANSVERSAL 
+GRUP 4
+Mario Alaez, Manuel Reyes, Cristhian Godoy
+Gerson Interiano & Silvia Martin
+ASIXc1B 29/05/2025
+
+#INDEX
 [**Objectius del projecte: 2**](#_38xkcq3hwdcu)
 
 [**Resum del projecte 2**](#_312satv3yjia)
