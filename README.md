@@ -1,10 +1,7 @@
-![portada]()
+![portada](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Manel/portada%20projecte.png)
 
-# PROJECTE TRANSVERSAL 
-GRUP 4
-Mario Alaez, Manuel Reyes, Cristhian Godoy
-Gerson Interiano & Silvia Martin
-ASIXc1B 29/05/2025
+
+
 
 # INDEX
 [**Objectius del projecte: 2**](#_38xkcq3hwdcu)
