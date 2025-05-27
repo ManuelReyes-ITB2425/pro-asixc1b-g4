@@ -379,6 +379,9 @@ El procediment és el mateix per a l'altre parell de discos, una vegada acabat e
 Ja per últim, anem a l'eina de Windows per crear i formatar particions i fem clic dret a un dels dos discos i li donem a crear nou volum distribuït, seleccionem tots dos discos i ja tindríem el RAID 10.
 ![raid10_5](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/part%20teorica/Mario/RAID%2010/Captura%20de%20pantalla%20de%202025-05-26%2008-48-40.png)
 
+Aquí està l'altre RAID 10 del servidor d'Àudio i streaming que són 2 dels nostres serveis pilars.
+![raid10](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-21%2011-56-49.png)
+
 **Prevenció de riscos laborals:**
 
 Risc elèctric: És fonamental que totes les instal·lacions estiguin ben fetes i revisades. No tothom pot manipular els sistemes elèctrics; només personal format i, si cal, amb equips de protecció especials.
@@ -497,20 +500,21 @@ Es poden configurar els equips de l'empresa, com ara els ordinadors, perquè s'a
 **Àudio i streaming**
 
 El primer és instal·lar el icecast2
-
+![Audio](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-21%2009-24-11.png)
 
 El icecast2 funciona perfectament amb el port 8000
-
+![Icecastweb](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-21%2009-28-56.png)
 
 S’ha modificat el kernel a un Linux genèric, perquè el que tenia era d'AWS, per la qual cosa el darkice no funcionava perquè necessita una targeta de so, i per això també instal·li un mòdul snd-aloop, que és una targeta de so virtual.
 
-
+![Kernel](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-21%2011-32-48.png)
 
 Fitxer de configuració de darkice.cfg
-
+![darkice](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/darkice.png)
 
 Aquí està la comprovació que sí que reprodueix so en el punt de muntatge /live.mp3
-
+![live](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-21%2011-38-56.png)
+![live](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-21%2011-34-19.png)
 
 En streaming el que vam fer va ser instal·lar el gstreamer per a compartir un vídeo a un client. El servidor envia amb aquesta comanda _“gst-launch-1.0 -v filesrc location=/home/ubuntu/hola.mp4 ! decodebin ! x264enc tune=zerolatency ! rtph264pay ! udpsink host=52.202.226.208 port=5000”_
 
@@ -519,12 +523,13 @@ el client rep així “_gst-launch-1.0 -v \\_
 _udpsrc port=5000 caps="application/x-rtp, media=video, encoding-name=H264, payload=96" ! \\_
 
 _rtph264depay ! avdec_h264 ! videoconvert ! xvimagesink”_
-
+![stream](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-22%2008-55-30.png)
 
 També comprovem l'amplada de banda.
 
 Servidor _“iperf3 -s”_, client _“iperf3 -c 52.202.226.208”_
 
+![banda](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-21%2009-42-02.png)
 
 També tenim la web publicada a un domini públic.
 
