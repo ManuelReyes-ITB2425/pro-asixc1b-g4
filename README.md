@@ -616,6 +616,7 @@ Ara només quedaria anar a la màquina servidor i afegir l'ordinador a 'Location
 ![monitoratge4](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-46-22.png)
 
 Aquet seria el resultat
+
 ![ELk](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/1678644591a85a6fb9588d2c29d9ca4d780054f4/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-29-26.png)
 
 **ELK Stack**
