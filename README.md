@@ -357,7 +357,7 @@ També farem servir un programa anomenat Speccy per monitoritzar el rendiment de
 
 Per a les còpies de seguretat de Linux es poden fer servir scripts i l'ús de comandes com ara “tar” i en quant a Windows, l'ús de Windows Server Backup més scripts permet fer còpies de seguretat i passar-les a altres màquines. El destí de les còpies serà el QNAP TS-453D; aquest servidor està fora de l'edifici de l'empresa per garantir una major seguretat i, depenent de la volatilitat de les dades, es faran més o menys còpies incrementals.
 
-[Enllaç](proyecto/Fotos/part teorica/Mario/Copias.png)
+[Enllaç](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/727d2261fd6ccef69c5b0d17b9a25202d2b68fd3/proyecto/Fotos/part%20teorica/Mario/Copias.png)
 
 
 **RAID**
