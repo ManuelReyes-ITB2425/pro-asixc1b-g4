@@ -337,25 +337,23 @@ Per als tallafocs (o firewalls), utilitzarem OPNsense, el qual és un tallafoc q
 Per al monitoratge dels nostres equips Linux i Windows utilitzarem Veyon, que és un programari que permet monitorar fàcilment múltiples usuaris alhora i fins i tot controlar els ordinadors o bloquejar-los.
 
 El primer pas per monitoritzar és descarregar-se el programa Veyon i configurar-lo, per començar hem de seleccionar l'opció d'utilitzar claus.
-
+![monitoratge1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-44-49.png)
 
 El següent pas és crear el parell de claus.
-
+![monitoratge2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-45-45.png)
 
 I la clau pública la passem a totes les màquines que vulguem monitoritzar i aquestes l'hauran d'importar.
-
+![monitoratge3](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-46-02.png)
 
 Ja per últim afegim la mateixa ubicació que a la màquina en la qual vam crear les claus i ja estaria per part del client.
 
 Ara només quedaria anar a la màquina servidor i afegir l'ordinador a 'Locations & computers'.
-
-
-També farem servir un programa anomenat Speccy per monitoritzar el rendiment de tots els servidors i assegurar-nos que funcionen sense problemes i que no s'escalfen.
-
+![monitoratge4](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-46-22.png)
 
 **Còpies de seguretat / Backups**
 
 Per a les còpies de seguretat de Linux es poden fer servir scripts i l'ús de comandes com ara “tar” i en quant a Windows, l'ús de Windows Server Backup més scripts permet fer còpies de seguretat i passar-les a altres màquines. El destí de les còpies serà el QNAP TS-453D; aquest servidor està fora de l'edifici de l'empresa per garantir una major seguretat i, depenent de la volatilitat de les dades, es faran més o menys còpies incrementals.
+
 [**Enllaç:**](https://docs.google.com/spreadsheets/d/1ehn85YJZ_ASM9lbmWm7qbArGI33OPLD-D0ais7v6l28/edit?usp=sharing)
 ![copias](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/727d2261fd6ccef69c5b0d17b9a25202d2b68fd3/proyecto/Fotos/part%20teorica/Mario/Copias.png)
 
@@ -369,10 +367,17 @@ Per al servidor d'AC i BBDD hem decidit utilitzar un RAID 10 per tenir molt espa
 **RAID 10:**
 
 Per fer el RAID 10, el primer pas és afegir 4 discos a la màquina, ja que aquests seran els que ens caldran per a aquest RAID.
+![raid10_1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/part%20teorica/Mario/RAID%2010/Captura%20de%20pantalla%20de%202025-05-26%2008-47-55.png)
 
+Una vegada tenim els 4 discos, creem dos RAIDs de tipus 1.
+![raid10_2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/part%20teorica/Mario/RAID%2010/Captura%20de%20pantalla%20de%202025-05-26%2008-48-08.png)
+![raid10_3](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/part%20teorica/Mario/RAID%2010/Captura%20de%20pantalla%20de%202025-05-26%2008-48-18.png)
+
+El procediment és el mateix per a l'altre parell de discos, una vegada acabat ens quedaria així:
+![raid10_4](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/part%20teorica/Mario/RAID%2010/Captura%20de%20pantalla%20de%202025-05-26%2008-48-31.png)
 
 Ja per últim, anem a l'eina de Windows per crear i formatar particions i fem clic dret a un dels dos discos i li donem a crear nou volum distribuït, seleccionem tots dos discos i ja tindríem el RAID 10.
-
+![raid10_5](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/part%20teorica/Mario/RAID%2010/Captura%20de%20pantalla%20de%202025-05-26%2008-48-40.png)
 
 **Prevenció de riscos laborals:**
 
@@ -538,12 +543,14 @@ També tenim la web publicada a un domini públic.
 
 **BBDD**
 
-Per la base de dades hem utilitzat MySQL Workbench, cosa que ens permet una fàcil gestió de totes les nostres dades.
-
+Per a la base de dades, hem fet servir MySQL Workbench, que ens facilita la gestió de totes les nostres dades, i phpMyAdmin per accedir-hi des de qualsevol dispositiu.
+![BD1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/BBDD/Captura%20de%20pantalla%20de%202025-05-26%2008-59-52.png)
 
 Totes les nostres taules tenen una gran quantitat de dades
+![BD2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/BBDD/Captura%20de%20pantalla%20de%202025-05-26%2009-00-03.png)
 
-
+Hem afegit totes les relacions segons aquest esquema i tenint en compte que codi_departament i codi_nivell són claus foranes.
+![BD3](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/BBDD/Captura%20de%20pantalla%20de%202025-05-26%2009-00-16.png)
 
 **Monitoratge**
 
