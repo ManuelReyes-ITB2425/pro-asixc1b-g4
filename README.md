@@ -350,24 +350,7 @@ Per als tallafocs (o firewalls), utilitzarem OPNsense, el qual és un tallafoc q
 
 **Monitoratge**
 
-Per al monitoratge dels nostres equips Linux i Windows utilitzarem Veyon, que és un programari que permet monitorar fàcilment múltiples usuaris alhora i fins i tot controlar els ordinadors o bloquejar-los.
-
-El primer pas per monitoritzar és descarregar-se el programa Veyon i configurar-lo, per començar hem de seleccionar l'opció d'utilitzar claus.
-
-![monitoratge1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-44-49.png)
-
-El següent pas és crear el parell de claus.
-
-![monitoratge2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-45-45.png)
-
-I la clau pública la passem a totes les màquines que vulguem monitoritzar i aquestes l'hauran d'importar.
-![monitoratge3](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-46-02.png)
-
-Ja per últim afegim la mateixa ubicació que a la màquina en la qual vam crear les claus i ja estaria per part del client.
-
-Ara només quedaria anar a la màquina servidor i afegir l'ordinador a 'Locations & computers'.
-![monitoratge4](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-26%2008-46-22.png)
-
+Per al monitoratge dels nostres equips Linux i Windows utilitzarem Veyon, que és un programari que permet monitorar fàcilment múltiples usuaris alhora i fins i tot controlar els ordinadors o bloquejar-los i per a monitoritzar els recursos del sistema utilitzarem ELK Stack + Metricbeat.
 **Còpies de seguretat / Backups**
 
 Per a les còpies de seguretat de Linux es poden fer servir scripts i l'ús de comandes com ara “tar” i en quant a Windows, l'ús de Windows Server Backup més scripts permet fer còpies de seguretat i passar-les a altres màquines. El destí de les còpies serà el QNAP TS-453D; aquest servidor està fora de l'edifici de l'empresa per garantir una major seguretat i, depenent de la volatilitat de les dades, es faran més o menys còpies incrementals.
