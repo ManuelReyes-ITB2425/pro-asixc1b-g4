@@ -387,19 +387,24 @@ Per al servidor d'AC i BBDD hem decidit utilitzar un RAID 10 per tenir molt espa
 **RAID 10:**
 
 Per fer el RAID 10, el primer pas és afegir 4 discos a la màquina, ja que aquests seran els que ens caldran per a aquest RAID.
+
 ![raid10_1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/part%20teorica/Mario/RAID%2010/Captura%20de%20pantalla%20de%202025-05-26%2008-47-55.png)
 
 Una vegada tenim els 4 discos, creem dos RAIDs de tipus 1.
+
 ![raid10_2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/part%20teorica/Mario/RAID%2010/Captura%20de%20pantalla%20de%202025-05-26%2008-48-08.png)
 ![raid10_3](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/part%20teorica/Mario/RAID%2010/Captura%20de%20pantalla%20de%202025-05-26%2008-48-18.png)
 
 El procediment és el mateix per a l'altre parell de discos, una vegada acabat ens quedaria així:
+
 ![raid10_4](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/part%20teorica/Mario/RAID%2010/Captura%20de%20pantalla%20de%202025-05-26%2008-48-31.png)
 
 Ja per últim, anem a l'eina de Windows per crear i formatar particions i fem clic dret a un dels dos discos i li donem a crear nou volum distribuït, seleccionem tots dos discos i ja tindríem el RAID 10.
+
 ![raid10_5](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/part%20teorica/Mario/RAID%2010/Captura%20de%20pantalla%20de%202025-05-26%2008-48-40.png)
 
 Aquí està l'altre RAID 10 del servidor d'Àudio i streaming que són 2 dels nostres serveis pilars.
+
 ![raid10](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-21%2011-56-49.png)
 
 **Prevenció de riscos laborals:**
