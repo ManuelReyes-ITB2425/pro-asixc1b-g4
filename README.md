@@ -364,7 +364,7 @@ Per a les còpies de seguretat de Linux es poden fer servir scripts i l'ús de c
 
 Per al servidor de còpies, hem decidit utilitzar un NAS més un RAID 5. Amb tres discs, aquesta configuració ens proporciona una capacitat útil equivalent a dos discs per a les dades, mentre que la informació de paritat (distribuïda entre tots els discs) ens permet recuperar les dades en cas de fallada d'un d'ells. A més, aquest sistema està centralitzat, fet que simplifica molt la realització de còpies de seguretat i la compartició d'arxius. Gràcies a aquesta redundància, si un dels discs falla, podem reconstruir tota la informació, ja que el sistema està dissenyat per tolerar la pèrdua d'un disc sense perdre dades.
 
-Per al servidor d'AC i BBDD hem decidit utilitzar un RAID 10 per tenir molt espai per a totes les nostres dades i a més redundància
+Per al servidor d'AC i BBDD, hem decidit utilitzar un RAID 10 per tenir molt d'espai per a totes les nostres dades i, a més a més, redundància. En canvi, el servidor SFTP només té un RAID 1, ja que considerem que és suficient.
 
 **RAID 10:**
 
@@ -388,6 +388,11 @@ Ja per últim, anem a l'eina de Windows per crear i formatar particions i fem cl
 Aquí està l'altre RAID 10 del servidor d'Àudio i streaming que són 2 dels nostres serveis pilars.
 
 ![raid10](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-21%2011-56-49.png)
+
+**RAID 1:**
+
+El RAID 1 és tan senzill com disposar de dos discs i, des del gestor de discos de Windows, crear un volum reflectit.
+![raid1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/8cb00f8999edea2ef9c4e812c92c4b38dd6c9a90/proyecto/Fotos/part%20teorica/Mario/RAID1.png)
 
 **Prevenció de riscos laborals:**
 
