@@ -645,8 +645,6 @@ Si tot ha surtit bé hauriem de poder accedir a Metricbeat dins de Kibana
 
 Hem instal·lat Active Directory al Windows Server i hem creat un parell d'usuaris per simular l'entorn de l'empresa. A més, tenim un servei de còpia de seguretat que té el DNS replicat i també l'Active Directory, igual que la resta de coses.
 
-![ad](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/AD.png)
-
 Hem connectat un PC client des de Virtualbox.
 
 ![ad](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-26%2009-12-32.png)
@@ -661,9 +659,14 @@ També el client hem instal·lat RSAT per a poder administrar el servidor que es
 
 **DNS**
 
-Al DNS tenim la zona del domini i també les dels serveis web d'àudio i de vídeo.
+Al DNS tenim la zona del domini asixc1.itb.cat i també les zones dels serveis web d'àudio i de vídeo.
+
+![ad](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/AD.png)
+
+Aquesta configuració és, de fet, la mateixa per a les altres zones.
 
 ![DNS](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/9eb38b4a75ae0ae7dd3fbd2d5492ddd3b1d33996/proyecto/Fotos/serveis/DNS/Captura%20de%20pantalla%20de%202025-05-27%2011-57-59.png)
+
 
 Totes les zones estan configurades amb les IPs públiques corresponents.
 
