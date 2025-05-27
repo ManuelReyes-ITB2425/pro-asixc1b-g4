@@ -268,6 +268,9 @@ Per controlar qui pot accedir físicament al CPD, es proposen les següents mesu
 - Sistema de registre d’accessos digital amb registre horari.
 - Política d’accés per rols: només tècnics autoritzats poden accedir al recinte principal dels servidors.
 
+![puerta](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/control-access-clercom-banner.jpg)
+
+
 **2\. Videovigilància**
 
 El CPD estarà monitoritzat en tot moment amb un sistema CCTV d’alta resolució:
@@ -278,6 +281,8 @@ El CPD estarà monitoritzat en tot moment amb un sistema CCTV d’alta resoluci�
   - Passadissos d’accés restringit.
 - Accés remot encriptat a les càmeres per supervisió des de fora del recinte.
 - Senyalització clara de zona videovigilada (complint la normativa de protecció de dades).
+
+![camara360](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/camara360.png)
 
 **3\. Prevenció, detecció i extinció d’incendis**
 
@@ -291,11 +296,18 @@ Per protegir el CPD contra el foc, proposem un sistema integral format per:
 - Sistema de ventilació intel·ligent per evitar sobreescalfament.
 - Portes tallafocs.
 
+![techo](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Falso%20techo.png)
+
+![Puerta](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/puerta-cortafuego.png)
+
+
 **Detecció:**
 
 - Sensors de fum òptics i de calor al sostre i sota el terra tècnic.
 - Sistema de detecció precoç amb aspiració d’aire que detecta partícules de fum molt abans de ser visibles.
 - Termostats per tenir una mica de control si se supera la temperatura establerta.
+
+![termo](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/termostato-digital-wk-010pw-gree-3igr9144.jpg)
 
 **Extinció:**
 
@@ -303,6 +315,10 @@ Per protegir el CPD contra el foc, proposem un sistema integral format per:
   - No danya els equips electrònics.
   - Apaga el foc sense deixar residus.
 - Extintors manuals de CO₂ disponibles a les sortides.
+
+![gas](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/gas-novec.jpg)
+
+![extintor2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/extintor-co2-5kg.png)
 
 **4\. Vies d’evacuació**
 
@@ -313,13 +329,20 @@ Per protegir el CPD contra el foc, proposem un sistema integral format per:
 - Passadissos lliures d’obstacles, amb mínim 1 m d’ample.
 - Simulacres semestrals per assegurar que el personal sap com actuar en cas d’incident.
 
+![led](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Manel/Captura%20de%20pantalla%20de%202025-05-21%2012-50-40.png)
+
+![Vias](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Manel/Captura%20de%20pantalla%20de%202025-05-21%2012-03-11.png)
 
 Organització càmera 1:
 
+![Camara](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Manel/Captura%20de%20pantalla%20de%202025-05-21%2012-11-46.png)
 
 Extintor:
 
+![extintor](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Manel/Captura%20de%20pantalla%20de%202025-05-21%2012-14-24.png)
 
+
+![Plano](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-26%2010-35-18.png)
 
 
 ## 1.5 Seguretat Lògica
@@ -510,6 +533,7 @@ S’ha modificat el kernel a un Linux genèric, perquè el que tenia era d'AWS, 
 ![Kernel](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-21%2011-32-48.png)
 
 Fitxer de configuració de darkice.cfg
+
 ![darkice](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/darkice.png)
 
 Aquí està la comprovació que sí que reprodueix so en el punt de muntatge /live.mp3
@@ -564,6 +588,10 @@ Totes les nostres taules tenen una gran quantitat de dades
 Hem afegit totes les relacions segons aquest esquema i tenint en compte que codi_departament i codi_nivell són claus foranes.
 ![BD3](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/BBDD/Captura%20de%20pantalla%20de%202025-05-26%2009-00-16.png)
 
+Comprovació que des d'un client puc veure la Base de dades i Administrar-la.
+
+![BD4](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-26%2009-46-05.png)
+
 **Monitoratge**
 
 Per al monitoratge hem utilitzat dues aplicacions, Speccy per al rendiment i Veyon per monitoritzar els usuaris, fins i tot controlar les seves màquines o bloquejar-les a distància.
@@ -580,7 +608,19 @@ Per al monitoratge hem utilitzat dues aplicacions, Speccy per al rendiment i Vey
 
 Hem instal·lat Active Directory al Windows Server i hem creat un parell d'usuaris per simular l'entorn de l'empresa. A més, tenim un servei de còpia de seguretat que té el DNS replicat i també l'Active Directory, igual que la resta de coses.
 
+![ad](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/AD.png)
 
+Hem connectat un PC client des de Virtualbox.
+
+![ad](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-26%2009-12-32.png)
+
+![AD](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-26%2009-13-03.png)
+
+També el client hem instal·lat RSAT per a poder administrar el servidor que està en el núvol.
+
+![Rsat](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/RSat.png)
+
+![Rsat](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Clientrsat.png)
 
 **DNS**
 
