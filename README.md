@@ -540,11 +540,9 @@ Visio del certificat:
 ![Cert. 2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Captura%20de%20pantalla%20de%202025-05-22%2010-10-44.png)
 
 Disseny de la nostra pàgina web i clients del nostre servei.
-
-![Pag. Clients](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Captura%20de%20pantalla%20de%202025-05-22%2010-25-25.png)
 ![Index.html](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Captura%20de%20pantalla%20de%202025-05-22%2010-26-32.png)
 
-Visio de la web: https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-20%2009-10-14.png
+Visio de la web: 
 ![Web IP](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Captura%20de%20pantalla%20de%202025-05-23%2008-33-48.png)
 
 També tenim la web publicada a un domini públic. 
