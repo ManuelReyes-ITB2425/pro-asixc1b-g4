@@ -520,9 +520,11 @@ Es poden configurar els equips de l'empresa, com ara els ordinadors, perquè s'a
 **Àudio i streaming**
 
 El primer és instal·lar el icecast2
+
 ![Audio](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-21%2009-24-11.png)
 
 El icecast2 funciona perfectament amb el port 8000
+
 ![Icecastweb](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-21%2009-28-56.png)
 
 S’ha modificat el kernel a un Linux genèric, perquè el que tenia era d'AWS, per la qual cosa el darkice no funcionava perquè necessita una targeta de so, i per això també instal·li un mòdul snd-aloop, que és una targeta de so virtual.
@@ -534,7 +536,9 @@ Fitxer de configuració de darkice.cfg
 ![darkice](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/darkice.png)
 
 Aquí està la comprovació que sí que reprodueix so en el punt de muntatge /live.mp3
+
 ![live](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-21%2011-38-56.png)
+
 ![live](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-21%2011-34-19.png)
 
 En streaming el que vam fer va ser instal·lar el gstreamer per a compartir un vídeo a un client. El servidor envia amb aquesta comanda _“gst-launch-1.0 -v filesrc location=/home/ubuntu/hola.mp4 ! decodebin ! x264enc tune=zerolatency ! rtph264pay ! udpsink host=52.202.226.208 port=5000”_
@@ -552,7 +556,7 @@ Servidor _“iperf3 -s”_, client _“iperf3 -c 52.202.226.208”_
 
 ![banda](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-21%2009-42-02.png)
 
-També tenim la web publicada a un domini públic.
+
 
 **Web** 
 
