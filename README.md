@@ -160,15 +160,15 @@ Els cables verds indiquen les connexions entre els servidors i els patch panels,
 
 La infraestructura elèctrica del nostre Centre de Processament de Dades ha estat dissenyada per garantir seguretat, continuïtat de servei i eficiència energètica, tenint en compte la distribució global dels nostres servidors i la seva ubicació geogràfica diferenciada.
 
-**Alimentació elèctrica redundant**
+**1\.Alimentació elèctrica redundant**
 
 La infraestructura elèctrica del nostre Centre de Processament de Dades (CPD) ha estat meticulosament dissenyada per assegurar un alt nivell de disponibilitat, continuïtat de servei i eficiència energètica, adaptant-se a les necessitats operatives actuals i preveient l'escalabilitat futura. El disseny fonamental es basa en la redundància de les fonts d'alimentació principals i la protecció mitjançant Sistemes d'Alimentació Ininterrompuda (SAI) per als equips de Tecnologies de la Informació (TI) i sistemes crítics auxiliars.
 
-**2/. Sistema de Subministrament Elèctric Principal:**
+**2\. Sistema de Subministrament Elèctric Principal:**
 
 Cada seu física del CPD compta amb una instal·lació elèctrica robusta, alimentada per dues acometides elèctriques independents (Feed A i Feed B) provinents de la xarxa pública. Aquestes acometides alimenten un Cuadro General de Distribución (CGD) central, que actua com a nucli per a la distribució de l'energia dins de les instal·lacions. Aquesta configuració de doble acometida minimitza el risc d'interrupcions totals del servei degudes a fallades en una de les línies de subministrament extern.
 
-**3/. Línies d'Alimentació Redundants (Línia A i Línea B) i Sistemes SAI:**
+**3\. Línies d'Alimentació Redundants (Línia A i Línea B) i Sistemes SAI:**
 
 Des del CGD, l'energia es canalitza cap a dos circuits elèctrics principals i independents, denominats Línia A i Línia B. Cada una d'aquestes línies alimenta un Sistema d'Alimentació Ininterrompuda (SAI) dedicat (SAI A i SAI B). Aquests SAIs estan dimensionats per:
   
@@ -289,7 +289,7 @@ t\_a = (C\_n \* V\_b\_total \* η\_inv \* DoD \* f\_p(I\_d) \* f\_t(T) \* f\_e \
 
 **Desglossament i Obtenció de Paràmetres:**
 
-- ` `**(Potència de la Càrrega):** Les potències de disseny són P\_L\_SAI\_A = 312.5 W i P\_L\_SAI\_B = 345 W. Aquests valors representen la càrrega operativa màxima esperada per a cada SAI, incloent un marge de seguretat del 25% sobre el consum estimat dels equips connectats. Aquest marge preveu possibles pics de consum i un creixement futur moderat.
+- **Potència de la Càrrega:** Les potències de disseny són P\_L\_SAI\_A = 312.5 W i P\_L\_SAI\_B = 345 W. Aquests valors representen la càrrega operativa màxima esperada per a cada SAI, incloent un marge de seguretat del 25% sobre el consum estimat dels equips connectats. Aquest marge preveu possibles pics de consum i un creixement futur moderat.
 - **Estimació de V\_b\_total (Voltatge Nominal del Banc de Bateries):**\
   El datasheet de l'SMTL1500RMI3UC no especifica directament el voltatge del seu banc intern de bateries de liti-ió. Basant-se en l'anàlisi de productes similars d'APC dins de la mateixa família Smart-UPS Lithium-ion i rang de potència (750VA-1500VA), s'observa que un voltatge de sistema de **48V** és una configuració comuna. Per tant, s'adopta V\_b\_total = 48V com una estimació fonamentada per a aquest model.
 - **Estimació de η\_inv (Eficiència de l'Inversor en Mode Bateria):**\
@@ -298,8 +298,9 @@ t\_a = (C\_n \* V\_b\_total \* η\_inv \* DoD \* f\_p(I\_d) \* f\_t(T) \* f\_e \
   L'efecte Peukert descriu la reducció de la capacitat efectiva d'una bateria a mesura que augmenta la taxa de descàrrega. Per a les bateries de liti-ió, aquest efecte és significativament menys pronunciat que per a les tradicionals de plom-àcid. Per a les taxes de descàrrega associades a autonomies en el rang de 15-60 minuts, s'estima un factor de Peukert de **0.95**. Això implica que s'espera poder utilitzar el 95% de la capacitat nominal de la bateria sota aquestes condicions, reflectint una pèrdua de només el 5% deguda a la rapidesa de la descàrrega.
 - **Càlcul de C\_n (Capacitat Nominal Estimada de la Bateria):**
 
-  ![](proyecto/Fotos/part teorica/Gerson/image (1).png)**\
-  Per estimar C\_n, s'utilitzarà un punt de referència del gràfic d'autonomia proporcionat per APC per a l'SMTL1500RMI3UC: a una càrrega de P\_L\_ref = 350W, el SAI ofereix una autonomia de t\_a\_ref = 21 minuts 50 segons.
+  ![](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/1ffaa18b586d59a7f8ce43f405373e7ccbf8a8fe/proyecto/Fotos/part%20teorica/Gerson/image%20(1).png?raw=true)**\
+
+Per estimar C\_n, s'utilitzarà un punt de referència del gràfic d'autonomia proporcionat per APC per a l'SMTL1500RMI3UC: a una càrrega de P\_L\_ref = 350W, el SAI ofereix una autonomia de t\_a\_ref = 21 minuts 50 segons.
 
   Convertim t\_a\_ref a hores: 21 minuts + (50/60) minuts = 21.8333 minuts.
 
@@ -320,7 +321,7 @@ t\_a = (C\_n \* V\_b\_total \* η\_inv \* DoD \* f\_p(I\_d) \* f\_t(T) \* f\_e \
 
   Llavors, E\_bat\_nom recalculat amb C\_n arrodonit: 3.10 Ah \* 48V = 148.8 Wh.
 
-- ` `**(Profunditat de Descàrrega Operativa):** Per a aquest projecte, s'estableix un DoD màxim del **90% (0.9)**. Aquesta és una decisió de disseny per no portar la bateria al seu límit absolut de descàrrega en cada cicle, buscant un equilibri entre l'aprofitament de l'energia i la promoció d'una vida útil més llarga, tot i que les bateries de liti-ió són robustes davant descàrregues profundes.
+- **Profunditat de Descàrrega Operativa:** Per a aquest projecte, s'estableix un DoD màxim del **90% (0.9)**. Aquesta és una decisió de disseny per no portar la bateria al seu límit absolut de descàrrega en cada cicle, buscant un equilibri entre l'aprofitament de l'energia i la promoció d'una vida útil més llarga, tot i que les bateries de liti-ió són robustes davant descàrregues profundes.
 - Com s'ha detallat a la taula, s'assignen valors d'**1.0**, **1.0** i **0.99** respectivament, reflectint condicions operatives òptimes, un SAI nou i pèrdues mínimes per cablejat intern.
 
 **Fase 3: Càlcul Teòric Manual de l'Autonomia**
@@ -405,18 +406,13 @@ Aquesta configuració de PDUs duals per rack és fonamental per implementar la r
 La connexió dels equips de TI a les PDUs es realitza de la següent manera, buscant un equilibri entre redundància i optimització de recursos:
 
 - **Servidor amb Doble Font d'Alimentació (Dell PowerEdge R550):** Aquest servidor crític, equipat amb dues fonts d'alimentació (PSU), es connecta amb una PSU a la PDU A i l'altra PSU a la PDU B del seu rack corresponent (Rack 1). Això garanteix la màxima disponibilitat per a aquest equip, ja que pot continuar operant fins i tot amb la fallada completa d'una de les línies d'alimentació o un dels SAIs.
-- **Equips amb Font d'Alimentació Única (Servidors Dell R250, Lenovo SR630; Switch HPE Aruba; Router Principal; Sensores NetBotz):** Actualment, aquests equips es connecten a una única PDU (ja sigui A o B), distribuint-los estratègicament entre les dues línies per balancejar la càrrega global sobre els SAIs A i B i per minimitzar l'impacte d'una fallada en una sola línia.
+- **Equips amb Font d'Alimentació Única (Servidors Dell R250, Lenovo SR630; Switch HPE Aruba; Router):** Actualment, aquests equips es connecten a una única PDU (ja sigui A o B), distribuint-los estratègicament entre les dues línies per balancejar la càrrega global sobre els SAIs A i B i per minimitzar l'impacte d'una fallada en una sola línia.
   - El servidor Dell R250 (Rack 2) s'alimenta de la Línia A (PDU A2).
   - El servidor Lenovo SR630 (Rack 3) s'alimenta de la Línia B (PDU B3).
   - El Switch HPE (Rack 1) s'alimenta de la Línia A (PDU A1).
-  - El Router Principal (Rack 1) s'alimenta de la Línia B (PDU B1).
-  - Els Sensors NetBotz (Rack 1) s'alimenten de la Línia A (PDU A1).
+  - El Router (Rack 1) s'alimenta de la Línia B (PDU B1).
 
-**6\. Previsió Futura: Implementació d'Interruptors de Transferència Automàtica (ATS):**
-
-Per augmentar la resiliència dels equips crítics amb font d'alimentació única (com el Switch i el Router), es contempla com a millora futura la implementació d'Interruptors de Transferència Automàtica (ATS) a nivell de rack. Un ATS permetria connectar aquests equips a ambdues línies d'alimentació (A i B) simultàniament, commutant automàticament a la línia de reserva en cas de fallada de la línia principal, sense interrupció del servei per a l'equip connectat. Aquesta actualització es planificarà segons l'evolució de les necessitats de disponibilitat i pressupost.
-
-**7\. Alimentació de Sistemes Auxiliars Crítics (HVAC):**
+**6\. Alimentació de Sistemes Auxiliars Crítics (HVAC):**
 
 Els sistemes de climatització, tant el sistema d'aire com el de refrigeració líquida, són vitals per al correcte funcionament del CPD. Aquests sistemes es consideren càrregues d'alt consum i s'alimenten mitjançant circuits dedicats i degudament protegits directament des del Cuadro General de Distribución (CGD), independents dels SAIs destinats als equips de TI. Es realitzarà un dimensionament exhaustiu d'aquests circuits per garantir la seva capacitat i fiabilitat.
 
@@ -428,43 +424,9 @@ Per optimitzar la gestió i seguretat del CPD, s'implementarà:
 - **Sostre Tècnic:** Permetrà la instal·lació d'equips de ventilació, il·luminació i altres infraestructures.
 - **Canalitzacions Separades:** Per a cablejat de potència i cablejat de dades, minimitzant interferències electromagnètiques.
 - **Etiquetatge Exhaustiu:** De tots els components elèctrics i de cablejat per facilitar la identificació, el manteniment i la resolució d'incidències.
-- **Racks Tancats:** Per millorar la seguretat física, el control ambiental i l'eficiència de la refri
+- **Racks Tancats:** Per millorar la seguretat física, el control ambiental i l'eficiència de la refrigeració.
 
 [Enllaç](https://drive.google.com/file/d/1eCAv05kAge5WRgztfIPfRZaM4Xw61cSj/view?usp=sharing) al diagrama del mapa elèctric
-
-**Càlculs de consum**
-
-S’ha fet un estudi detallat del consum energètic estimat per servidor:
-
-| **Servidor** | **Model** | **Consum Idle** | **Consum Típic** | **Consum Màxim** | **Dissipació BTU/hr** | **UPS Recomanat** |
-| --- | --- | --- | --- | --- | --- | --- |
-| **Windows 1** (AD + BD) | Dell PowerEdge R550 | 50–70 W | 130–180 W | 250–300 W | Fins a 3000 BTU/hr (font de 800W) | APC SMT1500RM2UC (1440 VA / 1000 W) |
-| --- | --- | --- | --- | --- | --- | --- |
-| **Windows 2** (FTP + DNS) | Dell PowerEdge R250 | 40–60 W | 80–120 W | 150–200 W | Fins a 1870 BTU/hr (font de 450W) | APC SMT1000RM2UC (1000 VA / 700 W) o compartit amb R630 |
-| --- | --- | --- | --- | --- | --- | --- |
-| **Ubuntu** (Web + Audio + Streaming) | Lenovo ThinkSystem SR630 | 50–70 W | 100–150 W | 200–250 W | Fins a 3357 BTU/hr (font de 750W) | Eaton 5P1550iRTA (1100 W) o APC SMT1500RM2UC |
-| --- | --- | --- | --- | --- | --- | --- |
-
-| **Dispositiu** | **Model** | **Consum Idle** | **Consum Típic** | **Consum Màxim** | **BTU/hr Màxim** | **Comentaris** |
-| --- | --- | --- | --- | --- | --- | --- |
-| **Switch L2+ amb PoE+** | HPE Aruba 2930F 24G PoE+ | ~36,8 W | ~60–120 W (estimat) | 445 W | 1518 BTU/hr | Suporta fins a 370 W de PoE+. Ideal per alimentar APs, telèfons IP, càmeres. |
-| --- | --- | --- | --- | --- | --- | --- |
-
-| **Sistema** | **Model** | **Consum Mínim** | **Consum Típic (Rated)** | **Consum Màxim** |
-| --- | --- | --- | --- | --- |
-| **Aire** | Daikin FTXS20KVMA (2 kW split) | N/D | 450 W | N/D |
-| --- | --- | --- | --- | --- |
-| **Líquid (DLC)** | Chilldyne CF‑CDU300 (300 kW capacity) | N/D | ~4 500 W (one pump) | ~7 300 W (two) |
-| --- | --- | --- | --- | --- |
-| **Sensors** | APC NetBotz Rack Monitor 750 (NBRK0750) | N/D | N/D | N/D |
-| --- | --- | --- | --- | --- |
-
-Cada valor correspon als documents tècnics dels fabricants o anàlisis especialitzades citades. Les consumicions “Mitjà” no sempre es detallen en les fonts, de manera que s’indica principalment Idle i màxim per a equips IT; en sistemes UPS/HVAC s’exposa més aviat eficiència i autonomia (en minuts).
-
-El servidor de backup **QNAP TS-453D**, segons proves i especificacions reals, consumeix entre **11,3W (idle)** i **25,98** en càrrega, depenent de discs i RAID. Es pren una mitjana **de 26W**.
-
-| QNAP TS-453D | Nova Zelanda | Backup | 11,3 | 25,98 | 26  |
-| --- | --- | --- | --- | --- | --- |
 
 ## 1.4 Seguretat Física
 
