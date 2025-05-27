@@ -316,9 +316,10 @@ Per protegir el CPD contra el foc, proposem un sistema integral format per:
   - Apaga el foc sense deixar residus.
 - Extintors manuals de CO₂ disponibles a les sortides.
 
+![extintor](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Manel/Captura%20de%20pantalla%20de%202025-05-21%2012-14-24.png)
+
 ![gas](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/gas-novec.jpg)
 
-![extintor2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/extintor-co2-5kg.png)
 
 **4\. Vies d’evacuació**
 
@@ -336,10 +337,6 @@ Per protegir el CPD contra el foc, proposem un sistema integral format per:
 Organització càmera 1:
 
 ![Camara](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Manel/Captura%20de%20pantalla%20de%202025-05-21%2012-11-46.png)
-
-Extintor:
-
-![extintor](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Manel/Captura%20de%20pantalla%20de%202025-05-21%2012-14-24.png)
 
 
 ![Plano](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-26%2010-35-18.png)
