@@ -594,15 +594,13 @@ Comprovació que des d'un client puc veure la Base de dades i Administrar-la.
 
 **Monitoratge**
 
-Per al monitoratge hem utilitzat dues aplicacions, Speccy per al rendiment i Veyon per monitoritzar els usuaris, fins i tot controlar les seves màquines o bloquejar-les a distància.
+Per al monitoratge hem utilitzat el paquet ELK Stack (Elastic + Kibana) + Metricbeat i per el monitoratge d'usuaris hem utilitzat Veyon, compartint la nostra clau publica.
 
-**Speecy**
-
-
+**ELK Stack**
+![ELk](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/ddcb019313d9a1b851ef32203447dce763af1c34/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-20-24.png)
 
 **Veyon**
-
-
+![ELk](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/1678644591a85a6fb9588d2c29d9ca4d780054f4/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-29-26.png)
 
 **Active Directory**
 
