@@ -171,13 +171,51 @@ Cada seu física del CPD compta amb una instal·lació elèctrica robusta, alime
 **3\. Línies d'Alimentació Redundants (Línia A i Línea B) i Sistemes SAI:**
 
 Des del CGD, l'energia es canalitza cap a dos circuits elèctrics principals i independents, denominats Línia A i Línia B. Cada una d'aquestes línies alimenta un Sistema d'Alimentació Ininterrompuda (SAI) dedicat (SAI A i SAI B). Aquests SAIs estan dimensionats per:
-
+  
 - Proporcionar energia filtrada i estabilitzada als equips sensibles.
-- Garantir una autonomia mínima de 15 minuts a plena càrrega operativa dels equips de TI connectats, permetent un apagat controlat dels sistemes en cas d'interrupció prolongada del subministrament extern, o bé donant temps per a la possible commutació a un grup electrogen (si n'hi hagués en una fase posterior).
-- La capacitat seleccionada per a cada una de les dues unitats SAI principals (SAI A i SAI B) és d'aproximadament 2200VA (equivalent a uns 1980W reals, per exemple el **APC by Schneider Electric** compleix aquestes característiques amb un factor de potencia de 0,9). Aquest dimensionament s'ha establert considerant la càrrega màxima estimada per a cada línia:
-  - **Càrrega Màxima Estimada per a SAI A: 805 Watts.** Aquesta càrrega prové principalment del Servidor R550 (PSU1), el Switch Aruba, els Sensors NetBotz (ubicats al Rack 1) i el Servidor R250 (ubicat al Rack 2).
-  - **Càrrega Màxima Estimada per a SAI B: 500 Watts.** Aquesta càrrega prové principalment del Servidor R550 (PSU2), el Router Principal (ubicats al Rack 1) i el Servidor SR630 (ubicat al Rack 3).
-- Aquesta capacitat individual de 2200VA per SAI proporciona un marge operatiu superior al 50% en cada línia respecte a la càrrega màxima actual, assegurant fiabilitat, una vida útil òptima de les bateries i capacitat per a futures petites expansions sense necessitat de reemplaçar els SAIs immediatament."
+- Garantir una autonomia mínima de 20 minuts a plena càrrega operativa dels equips de TI connectats, cosa que permet un apagat controlat dels sistemes en cas d'interrupció prolongada del subministrament extern.
+
+Per aconseguir l’autonomia mínima que volem que proporcioni el SAI, necessitarem diverses dades que necessiten valoració primer. Per al dimensionament adequat dels Sistemes d'Alimentació Ininterrompuda (SAI), és crucial estimar de manera realista el consum energètic de cada component de la infraestructura IT. A continuació, es detalla el procés i les consideracions per a determinar la càrrega aportada pels servidors i els diferents components que engloben la infraestructura elèctrica, destinat a allotjar els diferents serveis 
+Aquesta és la fórmula per aconseguir quan temps d’autonomia duraria el SAI amb una bateria de capacitat coneguda: 
+
+t_a = (C_n * V_b_total * η_inv * DoD * f_p(I_d) * f_t(T) * f_e * f_c) / P_L
+
+pel nostre CPD volem un temps mínim de 20 minuts, per tant, necessitarem calcular la capacitat nominal de la bateria requerida per aconseguir el temps desitjat. La fórmula seria doncs: 
+
+C_n = (P_L * t_a) / (V_b_total * η_inv * DoD * f_p(I_d) * f_t(T) * f_e * f_c)
+
+Per al dimensionament adequat dels Sistemes d'Alimentació Ininterrompuda (SAI), s'ha estimat el consum energètic operatiu de cada component crític que serà alimentat per aquests. La metodologia emprada consisteix a partir del consum màxim teòric de cada equip, basant-se en les especificacions documentades per a la configuració del projecte, i aplicar un Factor de Carga Operativa Estimada (FCOE) per reflectir la càrrega sostinguda esperada durant els 20 minuts d'autonomia requerits.
+
+**Servidor Dell PowerEdge R550 (AD + BD + Monitoratge)**
+- Consum Màxim Teòric del Servidor: S'estableix en 300 Watts. Aquest valor es basa en les estimacions prèvies per a la configuració definida al projecte i representa el pic màxim de consum previst per al sistema configurat.
+- Factor de Carga Operativa Estimada (FCOE): 60% (0.60). Aquest factor es justifica per:
+  - La naturalesa dels serveis (AD, BD, Monitoratge), que, tot i ser crítics, rarament operen al 100% de la capacitat màxima de tots els components de forma sostinguda.
+- Càlcul del Consum Operatiu:
+  Consum_Operatiu_R550 = 300 W * 0.60 = 180 Watts (total)
+- Distribució als SAIs: El R550 compta amb dues fonts d'alimentació redundants que comparteixen la càrrega.
+  - Càrrega per al SAI A (via PSU1): 90 Watts
+  - Càrrega per al SAI B (via PSU2): 90 Watts
+
+**2. Servidor Dell PowerEdge R250 (FTP + DNS Primari)**
+
+- Consum Màxim Teòric del Servidor: S'estableix en 200 Watts. Factor de Carga Operativa Estimada (FCOE): 50% (0.50). Aquest factor es justifica per:
+  - Els serveis d'FTP i DNS Primari tenen una demanda de recursos generalment moderada.
+  - Una càrrega del 50% sobre el màxim teòric es considera una estimació conservadora però adequada per a la seva operació contínua durant una contingència.
+- Càlcul del Consum Operatiu:
+  Consum_Operatiu_R250 = 200 W * 0.50 = 100 Watts
+- Distribució als SAIs: El R250 compta amb una única font d'alimentació.
+  - Càrrega per al SAI A: 100 Watts
+  
+**3. Servidor Lenovo ThinkSystem SR630 (Audio + Streaming + Web)**
+
+- Consum Màxim Teòric del Servidor: S'estableix en 250 Watts. Factor de Carga Operativa Estimada (FCOE): 70% (0.70). Aquest factor es justifica per:
+  - La potencial alta demanda dels serveis de streaming i web, que podrien requerir un percentatge significatiu dels recursos del servidor de forma sostinguda.
+- Càlcul del Consum Operatiu:
+  Consum_Operatiu_SR630 = 250 W * 0.70 = 175 Watts
+- Distribució als SAIs: S'ha definit que el SR630 comptarà amb una única font d'alimentació.
+  - Càrrega per al SAI B: 175 Watts
+
+
 
 **4\. Distribució d'Energia als Racks (PDUs):**
 
