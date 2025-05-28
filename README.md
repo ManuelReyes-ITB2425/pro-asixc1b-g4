@@ -616,55 +616,71 @@ Es poden configurar els equips de l'empresa, com ara els ordinadors, perquè s'a
 - **Protocols Clau:** TCP/IP, HTTP/S, FTP/SFTP, DNS, LDAP, SMB, RTP/RTSP, protocols de seguretat i enrutament.
 - **Previsió d'Ús:** 24/7 per a la majoria dels sistemes, tràfic principal per streaming (estimat 9,5 TB/any de sortida), web, FTP, replicacions, i trànsit gestionat pel firewall.
 
-**2\. Estimació del Consum Energètic i la Petjada de Carboni (Anual):**
+﻿**2. Estimació del Consum Energètic i la Petjada de Carboni (Anual)**
 
-- **Consum Energètic Infraestructura Física Local (CPD de l'empresa):**
-  - Servidor R550 (AD+BD): 155W (típic)
-  - Servidor R250 (FTP+DNS): 100W (típic)
-  - Servidor SR630 (Ubuntu): 125W (típic)
-  - Switch: 90W (típic)
-  - Router: 30W (estimat)
-  - Sensors NetBotz: 15W (estimat)
-  - **Subtotal Equips TI al CPD:** 515W
-  - Pèrdues SAIs (sobre 515W, eficiència 95%): ~27,1W
-  - **Consum TI + SAIs al CPD:** 542,1W
-  - Consum HVAC (Daikin 450W + Chilldyne 4500W): 4950W
-  - **Total Consum CPD:** 542,1W + 4950W = **5492,1W**
-  - **Consum Anual CPD:** 5492,1W \* 8760h = **48.110,8 kWh/any**.
-- **Consum Energètic Infraestructura Física Externa (Offsite):**
+A continuació, es detalla l'estimació del consum energètic anual de la infraestructura física local del CPD i la seva corresponent petjada de carboni.
+
+- **Consum Energètic dels Equips de Tecnologies de la Informació (TI) al CPD:**\
+  S'utilitzen els valors de consum operatiu per a cada component:
+  - Servidor R550 (AD+BD+Monitoratge): 180 W
+  - Servidor R250 (FTP+DNS Primari): 100 W
+  - Servidor SR630 (Ubuntu - Audio+Streaming+Web): 175 W
+  - Switch HPE Aruba: 60 W
+  - Router Ubiquiti ER-4: 11 W
+  - **Subtotal Consum Equips TI (P\_IT): 180 + 100 + 175 + 60 + 11 = 526 Watts**
+- **Consum Energètic dels Sistemes d'Alimentació Ininterrompuda (SAIs):**\
+  S'utilitzen dos SAIs APC SMTL1500RMI3UC, cadascun alimentant una part de la càrrega IT. La capacitat màxima de cada SAI és de 1350W.
+  - Càrrega IT connectada al SAI A (sense marge): 90W (R550/2) + 100W (R250) + 60W (Switch) = 250W.\
+    Percentatge de càrrega sobre SAI A: (250W / 1350W) \* 100 ≈ 18.5%.
+  - Càrrega IT connectada al SAI B (sense marge): 90W (R550/2) + 175W (SR630) + 11W (Router) = 276W.\
+    Percentatge de càrrega sobre SAI B: (276W / 1350W) \* 100 ≈ 20.4%.
+- Ambdues càrregues estan per sota del 25% de la capacitat del SAI. Segons el gràfic d'eficiència de l'SMTL1500RMI3UC, l'eficiència a càrregues baixes (ex: <25%) és molt alta, al voltant del **97.8%** en mode normal (online).\
+  Les pèrdues energètiques dels SAIs es calculen com: Pèrdues\_SAI = P\_IT\_connectada\_al\_SAI \* (1 - Eficiència\_SAI).\
+  De forma més directa, el consum total vist per la xarxa per alimentar els equips IT a través dels SAIs és: Consum\_Total\_TI\_amb\_SAIs = P\_IT / Eficiència\_Mitjana\_SAIs.
+  - Assumint una eficiència mitjana del **97.8% (0.978)** per als SAIs operant a aquests nivells de càrrega:\
+    Consum Total TI + Pèrdues SAIs = Subtotal\_Consum\_Equips\_TI / Eficiència\_SAIs\
+    Consum Total TI + Pèrdues SAIs = 526 W / 0.978 ≈ 537.83 Watts
+  - Les pèrdues són: 537.83 W - 526 W ≈ 11.83 Watts.
+- **Consum Energètic dels Sistemes de Climatització (HVAC):**
+  - HVAC Aire (Daikin): 450 W
+  - HVAC Líquid (Chilldyne): 4500 W 
+  - **Subtotal Consum HVAC: 450 W + 4500 W = 4950 Watts**
+- **Consum Energètic Total de la Infraestructura Física Local del CPD:**\
+  Total\_Consum\_CPD = (Consum Total TI + Pèrdues SAIs) + Subtotal\_Consum\_HVAC\
+  Total\_Consum\_CPD = 537.83 W + 4950 W = 5487.83 Watts
+- **Consum Anual de la Infraestructura Física Local del CPD:**\
+  Consum\_Anual\_CPD = Total\_Consum\_CPD \* 8760 hores/any\
+  Consum\_Anual\_CPD = 5487.83 W \* 8760 h = 48073.3908 Wh/any ≈ 48073.4 kWh/any
+- **Consum Energètic Infraestructura Física Externa (Offsite - QNAP):**
   - Servidor QNAP TS-453D (còpies): 26W (mitjana)
-  - **Consum Anual QNAP:** 26W \* 8760h = **227,76 kWh/any**.
-- **Total Consum Anual Infraestructura Física (Local + Offsite):**
-  - 48.110,8 kWh + 227,76 kWh = **48.338,56 kWh/any**.
-- **Consum Energètic Instàncies Cloud (4 instàncies):**
-  - Cloud 1 (Rèplica Win1): ~0,08 kWh/hora.
-  - Cloud 2 (Rèplica Win2): ~0,02 kWh/hora.
-  - Cloud 3 (Rèplica Ubuntu): ~0,07 kWh/hora.
-  - Cloud 4 (Firewall OPNsense): ~0,01 kWh/hora (basat en 2vCPU, 4GB RAM).
-  - **Total Consum Horari Cloud:** 0,08 + 0,02 + 0,07 + 0,01 = 0,18 kWh/hora.
-  - **Consum Anual Cloud:** 0,18 kWh/hora \* 8760 hores/any = **1.576,8 kWh/any**.
-- **Consum Energètic per Tràfic de Dades (Streaming):**
-  - Estimació (0,05 kWh/GB per 9,5TB): **475 kWh/any**.
-- **Consum Energètic Total Anual del Projecte:**
-  - 48.338,56 kWh (físic) + 1.576,8 kWh (cloud) + 475 kWh (tràfic) = **50.390,36 kWh/any**.
+  - Consum Anual QNAP: 26W \* 8760h = 227.76 kWh/any.
+- **Total Consum Anual Infraestructura Física (Local + Offsite):**\
+  48073.4 kWh + 227.76 kWh = 48301.16 kWh/any.
+- **Consum Energètic Instàncies Cloud i Tràfic de Dades:**
+  - Consum Anual Cloud: **1576.8 kWh/any**.
+  - Consum Energètic per Tràfic de Dades (Streaming): **475 kWh/any**.
+- **Consum Energètic Total Anual del Projecte:**\
+  48301.16 kWh (físic) + 1576.8 kWh (cloud) + 475 kWh (tràfic) = 50352.96 kWh/any.
 - **Petjada de Carboni Anual Estimada (kg CO2 eq.):**
-  - **Infraestructura Física (CPD Local + QNAP Offsite):** 48.338,56 kWh \* 0,19 kgCO2/kWh (factor Espanya) = **9.184,33 kg CO2 eq.**
-  - **Instàncies Cloud:** 1.576,8 kWh \* 0,10 kgCO2/kWh (factor regió verda) = **157,68 kg CO2 eq.**
-  - **Tràfic de Dades:** 475 kWh \* 0,19 kgCO2/kWh (factor conservador) = **90,25 kg CO2 eq.**
-  - **Petjada de Carboni Total Anual:** 9.184,33 + 157,68 + 90,25 = **9.432,26 kg CO2 eq. (≈ 9,43 tones CO2 eq./any)**.
+  - Infraestructura Física (CPD Local + QNAP Offsite): 48301.16 kWh \* 0,19 kgCO2/kWh (factor Espanya) = 9177.22 kg CO2 eq.
+  - Instàncies Cloud: 1576.8 kWh \* 0,10 kgCO2/kWh (factor regió verda) = 157.68 kg CO2 eq.
+  - Tràfic de Dades: 475 kWh \* 0,19 kgCO2/kWh (factor conservador) = 90.25 kg CO2 eq.
+  - **Petjada de Carboni Total Anual: 9177.22 + 157.68 + 90.25 = 9425.15 kg CO2 eq. (≈ 9.43 tones CO2 eq./any)**.
 
-**3\. Proposta de Mesures de Reducció o Optimització:**
+**3. Proposta de Mesures de Reducció o Optimització:**
 
 - **Prioritat Màxima: Optimització Energètica de la Infraestructura Física Local (CPD):**
-    1. **Reavaluació Crítica i Optimització del Sistema HVAC (Chilldyne):** Investigar i ajustar el consum de 4500W a la càrrega tèrmica real (515W TI). Aquesta és la mesura amb MÉS potencial d'estalvi.
-    2. **Contractació d'Energia 100% Renovable:** Per al subministrament elèctric del CPD local i, si és possible, per a la ubicació del servidor QNAP offsite (encara que el seu consum és molt menor).
-    3. **Monitorització Energètica Detallada del CPD:** PDUs intel·ligents, sensors de consum per a HVAC.
-    4. **Optimització del Servidor de Còpies QNAP:** Tot i ser de baix consum, assegurar que utilitza modes de repòs quan no està actiu i que els discos durs són eficients.
-    5. **Selecció de Regions Cloud "Verdes".**
+  - **HVAC amb Capacitat de Modulació:** En la fase de selecció final dels equips de refrigeració líquida, serà prioritari escollir unitats que ofereixin una **àmplia capacitat de modulació**. Això implica que el sistema ha de poder ajustar la seva potència de refrigeració (i, conseqüentment, el seu consum elèctric) de manera dinàmica i eficient per adaptar-se a la càrrega tèrmica real generada pels equips IT, que actualment és d'aproximadament 0.53 kW. S'evitaran sistemes que operin amb un consum mínim elevat i constant, independentment de la demanda.
+  - **Dimensionament Adequat a la Càrrega Actual i Prevista:** El sistema HVAC s'haurà de dimensionar considerant no només la capacitat màxima de refrigeració necessària per a una futura expansió del CPD, sinó també l'eficiència operativa a la càrrega IT actual i a curt termini. Si es preveu un creixement gradual, solucions modulars o sistemes amb múltiples etapes podrien ser més eficients que una única unitat de gran capacitat operant constantment a un baix percentatge de la seva potència.
+  - **Implementació de Controls Intel·ligents i Free Cooling:** La gestió del sistema HVAC es basarà en sensors de temperatura distribuïts estratègicament i algoritmes de control avançats per optimitzar el seu funcionament. Es reiterarà la investigació i aplicació de tècniques de **free cooling**, aprofitant les condicions climàtiques locals per minimitzar l'ús de refrigeració mecànica.
+  - **Contractació d'Energia 100% Renovable:** Per al subministrament elèctric del CPD local i, si és possible, per a la ubicació del servidor QNAP offsite.
+  - **Optimització del Servidor de Còpies QNAP:** Tot i ser de baix consum, assegurar que utilitza modes de repòs quan no està actiu i que els discos durs són eficients.
+  - **Selecció de Regions Cloud "Verdes".**
+
 - **Estratègies Generals d'Optimització i Sostenibilitat:**
-    1. **Compressió de Dades:** Per a trànsit de xarxa i emmagatzematge de còpies.
-    2. **Implementació d'Interruptors de Transferència Automàtica (ATS) al CPD:** Per a equips locals amb font única, com es preveia.
-    3. **Economia Circular i Conscienciació.**
+  - **Compressió de Dades:** Per a trànsit de xarxa i emmagatzematge de còpies.
+  - **Implementació d'Interruptors de Transferència Automàtica (ATS) al CPD:** Per a equips locals amb font única.
+  - **Economia Circular i Conscienciació.**
 
 #
 
