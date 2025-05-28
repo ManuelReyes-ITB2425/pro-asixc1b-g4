@@ -106,8 +106,6 @@ La infraestructura requerirà un total de 4 servidors físics locals i 3 instàn
 - **RAM**: 32 GB
 - **Emmagatzematge**: 4 × 1TB SSD SATA en RAID 10
 
-S'han previst unitats idèntiques al núvol d'aquest servidors per facilitar el balanceig de càrrega i garantir redundància en cas de fallada.
-
 **1 Servidor de còpies (offsite):**
 
 [**Enllaç**](https://www.pccomponentes.com/qnap-ts-453d-4g-nas)**:**
