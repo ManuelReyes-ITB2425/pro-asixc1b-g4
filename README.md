@@ -75,7 +75,7 @@ La infraestructura requerirà un total de 4 servidors físics locals i 3 instàn
 
 **Servidors locals**
 
-**Servidor Windows 1 → AD + BD + DNS primari**
+**Servidor Windows 1 → AD + BBDD + Monitoratge**
 
 [**Enllaç**](https://www.dell.com/es-es/shop/servidores-almacenamiento-y-redes/servidor-de-montaje-en-rack-poweredge-r550/spd/poweredge-r550/per5503a?configurationid=63a9139a-95e8-4626-8238-84ce2cb6448e)**:**
 
@@ -85,7 +85,7 @@ La infraestructura requerirà un total de 4 servidors físics locals i 3 instàn
 - **Emmagatzematge**: 4 × 1TB SSD SATA en RAID 10
 - **Xarxa**: 10GbE SFP+
 
-**Servidor Windows 2 → FTP + DNS secundari**
+**Servidor Windows 2 → FTP + DNS**
 
 [**Enllaç**](https://www.pccomponentes.com/dell-poweredge-r250-intel-xeon-e-2314-16gb-2tb?srsltid=AfmBOoogM6taePpGJhN4Z5b82q3D39c92tqcTq3PzmtzL-FQuVXiXv-H)**:**
 
@@ -125,8 +125,6 @@ S'han previst unitats idèntiques al núvol d'aquest servidors per facilitar el 
 
 [**Enllaç:**](https://www.pccomponentes.com/hpe-2930f-switch-24-puertos-gigabit-poe-4-sfp?srsltid=AfmBOoqpqz-Sw0tID-7cbM6R5OnbXnJExzFeKCM-Kk-UCagorBP46rkQ)
 
-**Característiques**:
-
 - 24 ports Gigabit (PoE)  
 
 - 4 ports SFP+ per a uplinks de 10 GbE  
@@ -141,7 +139,6 @@ Hem desplegat 3 instàncies virtuals al núvol, cada una corresponent a un dels 
 
 - **Servidor Cloud 1**: Replica de Windows 1 (AD + BD + DNS)
 - **Servidor Cloud 2**: Replica de Windows 2 (FTP + DNS)  
-
 - **Servidor Cloud 3**: Replica del servidor Ubuntu (streaming, audio i web)
 - **Servidor Cloud 4:** Firewall
 
