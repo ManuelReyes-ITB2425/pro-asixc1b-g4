@@ -75,7 +75,7 @@ La infraestructura requerirà un total de 4 servidors físics locals i 3 instàn
 
 **Servidors locals**
 
-**Servidor Windows 1 → AD + BBDD + Monitoratge**
+**Servidor Windows 1 → AD + BD + Monitoratge**
 
 [**Enllaç**](https://www.dell.com/es-es/shop/servidores-almacenamiento-y-redes/servidor-de-montaje-en-rack-poweredge-r550/spd/poweredge-r550/per5503a?configurationid=63a9139a-95e8-4626-8238-84ce2cb6448e)**:**
 
@@ -533,7 +533,7 @@ Per a les còpies de seguretat de Linux es poden fer servir scripts i l'ús de c
 
 Per al servidor de còpies, hem decidit utilitzar un NAS més un RAID 5. Amb tres discs, aquesta configuració ens proporciona una capacitat útil equivalent a dos discs per a les dades, mentre que la informació de paritat (distribuïda entre tots els discs) ens permet recuperar les dades en cas de fallada d'un d'ells. A més, aquest sistema està centralitzat, fet que simplifica molt la realització de còpies de seguretat i la compartició d'arxius. Gràcies a aquesta redundància, si un dels discs falla, podem reconstruir tota la informació, ja que el sistema està dissenyat per tolerar la pèrdua d'un disc sense perdre dades.
 
-Per al servidor d'AC i BBDD, hem decidit utilitzar un RAID 10 per tenir molt d'espai per a totes les nostres dades i, a més a més, redundància. En canvi, el servidor SFTP només té un RAID 1, ja que considerem que és suficient.
+Per al servidor d'AC i BD, hem decidit utilitzar un RAID 10 per tenir molt d'espai per a totes les nostres dades i, a més a més, redundància. En canvi, el servidor SFTP només té un RAID 1, ja que considerem que és suficient.
 
 **RAID 10:**
 
@@ -768,11 +768,11 @@ Visió de la web:
 També tenim la web publicada utilitzant el nostre DNS. 
 ![Web DNS](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Captura%20de%20pantalla%20de%202025-05-23%2008-34-41.png)
 
-**BBDD**
+**BD**
 
 Per a la base de dades, hem fet servir MySQL Workbench, que ens facilita la gestió de totes les nostres dades, i phpMyAdmin per accedir-hi des de qualsevol dispositiu.
 
-![BD1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/BBDD/Captura%20de%20pantalla%20de%202025-05-26%2008-59-52.png)
+![BD1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/BBDD/Captura%20de%20pantalla%20de%2025-05-26%2008-59-52.png)
 
 Totes les nostres taules tenen una gran quantitat de dades
 
@@ -782,13 +782,13 @@ Hem afegit totes les relacions segons aquest esquema i tenint en compte que codi
 
 ![BD3](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/BBDD/Captura%20de%20pantalla%20de%202025-05-26%2009-00-16.png)
 
-Comprovació que des d'un client puc veure la Base de dades i Administrar-la.
+Comprovació que des d'un client puc veure la base de dades i administrar-la.
 
 ![BD4](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-26%2009-46-05.png)
 
 **Monitoratge**
 
-Per al monitoratge dels nostres equips Linux i Windows utilitzarem Veyon, i per monitoritzar els recursos del servidor utiltizarem ELK Stack + Metricbeat.
+Per al monitoratge dels nostres equips Linux i Windows utilitzarem Veyon, i per monitoritzar els recursos del servidor utilitzarem ELK Stack + Metricbeat.
 
 **Veyon**
 
@@ -815,21 +815,21 @@ Aquest seria el resultat.
 **ELK Stack**
 
 El primer pas és instal·lar Elasticsearch i Kibana, i després configurar els seus fitxers perquè es puguin comunicar entre si i siguin accessibles des de qualsevol ordinador.
-Arxiu de configuracio de Elastic.
+Arxiu de configuració de Elastic.
 
 ![ELk1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/f1560425c2096285feeb0dab17af6d7090c060b1/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-44-15.png)
 
-Arxiu de configuracio de Kibana.
+Arxiu de configuració de Kibana.
 
 ![ELk2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/cf509e1a35d490e91db432af415aa8a46c33960b/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-46-26.png)
 
-Despres executem el setup del Metricbeat i li cambien la configuracio.
+Després executem el setup del Metricbeat i li canviem la configuració.
 
 ![ELk3](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/d4a5757feb93676803662352ca79c6ab67bd0812/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-47-50.png)
 
 ![ELk4](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/4b9eccf8130330bf9359efda9e5696e8ca18ee81/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-51-03.png)
 
-Si tot ha surtit bé hauriem de poder accedir a Metricbeat dins de Kibana.
+Si tot ha sortit bé hauríem de poder accedir a Metricbeat dins de Kibana.
 
 ![ELk](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/ddcb019313d9a1b851ef32203447dce763af1c34/proyecto/Fotos/serveis/Monitoratge/Captura%20de%20pantalla%20de%202025-05-27%2011-20-24.png)
 
