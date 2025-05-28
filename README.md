@@ -593,7 +593,8 @@ Es poden configurar els equips de l'empresa, com ara els ordinadors, perquè s'a
 
 **Servidor 1**
 ![serverA](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/78c2ca8275d961e42828a75de5a6e4209477c865/proyecto/Fotos/part%20teorica/Mario/AWS2.png)
-
+**Servidor 2** 
+![ServerFTPDNS](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Manel/Captura%20de%20pantalla%20de%202025-05-28%2012-27-28.png)
 **Servidor 3**
 ![server2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Audio-web-streaming.png)
 
