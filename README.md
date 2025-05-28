@@ -589,7 +589,20 @@ Per estalviar electricitat en la refrigeració, es pot aplicar el sistema de fre
 **Parada d’equips quan no hi ha càrrega:**  
 Es poden configurar els equips de l'empresa, com ara els ordinadors, perquè s'apaguin automàticament després d'un cert període d'inactivitat. Això redueix el consum innecessari fora de les hores de màxima activitat.
 
-#
+## Implementació a AWS
+
+## Comparació d’AWS amb altres proveïdors del núvol
+
+| **Proveïdor** | **Eficiència Energètica i Sostenibilitat** | **Solucions de CPD Administrats** | **Cobertura dels Requeriments (seguretat, escalabilitat, sostenibilitat)** |
+| --- | --- | --- | --- |
+| **Amazon Web Services (AWS)** | \-Té compromís per operar amb un 100% d’energia renovable per al 2025.<br><br>\- Data centers amb disseny eficient en refrigeració natural i ús d’energia solar i eòlica.<br><br>\- Índex PUE (Power Usage Effectiveness) molt baix (al voltant de 1.1-1.2). | \- Ofereix serveis com Amazon EC2, S3, RDS amb gestió completa.<br><br>\- Servei de migració i monitoratge del CPD.<br><br>\- Infraestructura robusta amb alta seguretat física i digital. | \- Compliment amb normes ISO 27001, SOC 2, GDPR.<br><br>\- Control d’accés físic i lògic estricte.<br><br>\- Arquitectures flexibles i segures.<br><br>\- Eficient i sostenible. |
+| --- | --- | --- | --- |
+| **Microsoft Azure** | \- Compromís per ser 100% renovable el 2025.<br><br>\- Ús intensiu de refrigeració per evaporació i dissenys amb alta eficiència PUE.<br><br>\- Programes de compensació d’emissions de carboni. | \- Azure Virtual Machines, Azure Storage, Azure SQL.<br><br>\- Solucions híbrides i multi-núvol.<br><br>\- Monitoratge i gestió automatitzada del CPD. | \- Certificacions com ISO 27001, SOC 1 i 2, HIPAA.<br><br>\- Seguretat avançada amb control d’accés multilayer.<br><br>\- Enfocament en sostenibilitat i compliment normatiu. |
+| --- | --- | --- | --- |
+| **Google Cloud Platform (GCP)** | \- Operació ja amb un 100% d’energia renovable des de 2017.<br><br>\- Innovacions en refrigeració líquida i intel·ligència artificial per optimitzar consum.<br><br>\- Data centers amb PUE molt baix. | \- Compute Engine, Cloud Storage, BigQuery.<br><br>\- Gestiona CPD i ofereix eines d’automatització.<br><br>\- Infraestructura amb alta disponibilitat i seguretat. | \- Compliment amb GDPR, HIPAA, ISO.<br><br>\- Controls d’accés rigorosos i auditables.<br><br>\- Sostenibilitat integrada en la planificació d’infraestructures. |
+| --- | --- | --- | --- |
+| **IBM Cloud** | \- Focalitzat en solucions híbrides amb optimització energètica.<br><br>\- Ús de tecnologies de refrigeració avançada i energètica verda. | \- Infraestructura gestionada i serveis cloud híbrids.<br><br>\- Seguretat física i virtual robusta.<br><br>\- Ofereix CPD dedicats i multitenant. | \- Compliment normatiu global.<br><br>\- Arquitectura segura i flexible.<br><br>\- Projectes amb orientació sostenible. |
+| --- | --- | --- | --- |
 
 ## 2 Sostenibilitat
 
@@ -678,20 +691,7 @@ A continuació, es detalla l'estimació del consum energètic anual de la infrae
   - **Implementació d'Interruptors de Transferència Automàtica (ATS) al CPD:** Per a equips locals amb font única.
   - **Economia Circular i Conscienciació.**
 
-#
 
-## Comparació d’AWS amb altres proveïdors del núvol
-
-| **Proveïdor** | **Eficiència Energètica i Sostenibilitat** | **Solucions de CPD Administrats** | **Cobertura dels Requeriments (seguretat, escalabilitat, sostenibilitat)** |
-| --- | --- | --- | --- |
-| **Amazon Web Services (AWS)** | \-Té compromís per operar amb un 100% d’energia renovable per al 2025.<br><br>\- Data centers amb disseny eficient en refrigeració natural i ús d’energia solar i eòlica.<br><br>\- Índex PUE (Power Usage Effectiveness) molt baix (al voltant de 1.1-1.2). | \- Ofereix serveis com Amazon EC2, S3, RDS amb gestió completa.<br><br>\- Servei de migració i monitoratge del CPD.<br><br>\- Infraestructura robusta amb alta seguretat física i digital. | \- Compliment amb normes ISO 27001, SOC 2, GDPR.<br><br>\- Control d’accés físic i lògic estricte.<br><br>\- Arquitectures flexibles i segures.<br><br>\- Eficient i sostenible. |
-| --- | --- | --- | --- |
-| **Microsoft Azure** | \- Compromís per ser 100% renovable el 2025.<br><br>\- Ús intensiu de refrigeració per evaporació i dissenys amb alta eficiència PUE.<br><br>\- Programes de compensació d’emissions de carboni. | \- Azure Virtual Machines, Azure Storage, Azure SQL.<br><br>\- Solucions híbrides i multi-núvol.<br><br>\- Monitoratge i gestió automatitzada del CPD. | \- Certificacions com ISO 27001, SOC 1 i 2, HIPAA.<br><br>\- Seguretat avançada amb control d’accés multilayer.<br><br>\- Enfocament en sostenibilitat i compliment normatiu. |
-| --- | --- | --- | --- |
-| **Google Cloud Platform (GCP)** | \- Operació ja amb un 100% d’energia renovable des de 2017.<br><br>\- Innovacions en refrigeració líquida i intel·ligència artificial per optimitzar consum.<br><br>\- Data centers amb PUE molt baix. | \- Compute Engine, Cloud Storage, BigQuery.<br><br>\- Gestiona CPD i ofereix eines d’automatització.<br><br>\- Infraestructura amb alta disponibilitat i seguretat. | \- Compliment amb GDPR, HIPAA, ISO.<br><br>\- Controls d’accés rigorosos i auditables.<br><br>\- Sostenibilitat integrada en la planificació d’infraestructures. |
-| --- | --- | --- | --- |
-| **IBM Cloud** | \- Focalitzat en solucions híbrides amb optimització energètica.<br><br>\- Ús de tecnologies de refrigeració avançada i energètica verda. | \- Infraestructura gestionada i serveis cloud híbrids.<br><br>\- Seguretat física i virtual robusta.<br><br>\- Ofereix CPD dedicats i multitenant. | \- Compliment normatiu global.<br><br>\- Arquitectura segura i flexible.<br><br>\- Projectes amb orientació sostenible. |
-| --- | --- | --- | --- |
 
 # 3 Serveis
 
