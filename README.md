@@ -537,20 +537,20 @@ Per al servidor d'AC i BBDD, hem decidit utilitzar un RAID 10 per tenir molt d'e
 
 **RAID 10:**
 
-Per fer el RAID 10, el primer pas és afegir 4 discos a la màquina, ja que aquests seran els que ens caldran per a aquest RAID.
+Per fer el RAID 10, el primer pas és afegir 4 **discs** a la màquina, ja que aquests seran els que ens caldran per a aquest RAID.
 
 ![raid10_1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/part%20teorica/Mario/RAID%2010/Captura%20de%20pantalla%20de%202025-05-26%2008-47-55.png)
 
-Una vegada tenim els 4 discos, creem dos RAIDs de tipus 1.
+Una vegada tenim els 4 **discs**, creem dos RAIDs de tipus 1.
 
 ![raid10_2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/part%20teorica/Mario/RAID%2010/Captura%20de%20pantalla%20de%202025-05-26%2008-48-08.png)
 ![raid10_3](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/part%20teorica/Mario/RAID%2010/Captura%20de%20pantalla%20de%202025-05-26%2008-48-18.png)
 
-El procediment és el mateix per a l'altre parell de discos, una vegada acabat ens quedaria així:
+El procediment és el mateix per a l'altre parell de **discs**, una vegada acabat ens quedaria així:
 
 ![raid10_4](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/part%20teorica/Mario/RAID%2010/Captura%20de%20pantalla%20de%202025-05-26%2008-48-31.png)
 
-Ja per últim, anem a l'eina de Windows per crear i formatar particions i fem clic dret a un dels dos discos i li donem a crear nou volum distribuït, seleccionem tots dos discos i ja tindríem el RAID 10.
+Ja per últim, anem a l'eina de Windows per crear i formatar particions i fem clic dret a un dels dos **discs** i li donem a crear nou volum distribuït, seleccionem tots dos **discs** i ja tindríem el RAID 10.
 
 ![raid10_5](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/part%20teorica/Mario/RAID%2010/Captura%20de%20pantalla%20de%202025-05-26%2008-48-40.png)
 
@@ -560,7 +560,7 @@ Aquí està l'altre RAID 10 del servidor d'Àudio i streaming que són 2 dels no
 
 **RAID 1:**
 
-El RAID 1 és tan senzill com disposar de dos discs i, des del gestor de discos de Windows, crear un volum reflectit.
+El RAID 1 és tan senzill com disposar de dos **discs** i, des del gestor de **discs** de Windows, crear un volum reflectit.
 
 ![raid1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/8cb00f8999edea2ef9c4e812c92c4b38dd6c9a90/proyecto/Fotos/part%20teorica/Mario/RAID1.png)
 
@@ -575,18 +575,23 @@ Per últim, l'entorn de treball també compta. S'ha de procurar que no hi hagi c
 **Sostenibilitat primera part:**
 
 **Optimitzar el consum d’energia:**  
+
 El primer pas fonamental és monitoritzar el CPD. D'aquesta manera, podem conèixer amb precisió el seu consum energètic, identificar àrees de millora i implementar mesures per fer-lo més sostenible.
 
 **Ús d’energia verda pel CPD:**  
+
 Una altra mesura important és la utilització d'energia verda. Per exemple, es pot contractar una companyia elèctrica que disposi de tarifes que assegurin el subministrament d'energia provinent de fonts renovables, contribuint així a un CPD més ecològic.
 
 **Estalvi en longitud de cablejat:**  
-Per optimitzar la longitud del cablejat i reduir pèrdues i costos, és crucial assegurar-se que la seva disposició sigui òptima. El mètode Top-of-Rack Switching (ToR) és una solució senzilla i eficaç, que consisteix a col·locar commutadors (switches) a la part superior de cada bastidor (rack), minimitzant així la longitud dels cables necessaris. A més, un bon disseny de cablejat estructurat des de l'inici, amb panells de connexió ben ubicats, evita cables innecessàriament llargs i en facilita la gestió i el manteniment.
+
+Per optimitzar la longitud del cablejat i reduir pèrdues i costos, és crucial assegurar-se que la seva disposició sigui òptima. El mètode Top-of-Rack Switching (ToR) és una solució senzilla i eficaç, que consisteix a col·locar commutadors (switches) a la part superior de cada bastidor (rack), **minimitzant** així la longitud dels cables necessaris. A més, un bon disseny de cablejat estructurat des de l'inici, amb panells de connexió ben ubicats, evita cables innecessàriament llargs i en facilita la gestió i el manteniment.
 
 **Sistemes de circulació d’aire que aprofitin condicions naturals**:  
+
 Per estalviar electricitat en la refrigeració, es pot aplicar el sistema de free-cooling. Aquesta tècnica consisteix a aprofitar l'aire exterior, especialment en llocs amb climes freds o temperatures exteriors favorables en el nostre cas hem escollit Canadà, Nova Zelanda i Islàndia, per refredar les instal·lacions, disminuint la dependència de sistemes de refrigeració mecànica.
 
 **Parada d’equips quan no hi ha càrrega:**  
+
 Es poden configurar els equips de l'empresa, com ara els ordinadors, perquè s'apaguin automàticament després d'un cert període d'inactivitat. Això redueix el consum innecessari fora de les hores de màxima activitat.
 
 ## 1.6 Implementació a AWS
