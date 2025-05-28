@@ -772,7 +772,7 @@ També tenim la web publicada utilitzant el nostre DNS.
 
 Per a la base de dades, hem fet servir MySQL Workbench, que ens facilita la gestió de totes les nostres dades, i phpMyAdmin per accedir-hi des de qualsevol dispositiu.
 
-![BD1](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/BBDD/Captura%20de%20pantalla%20de%2025-05-26%2008-59-52.png)
+![BD1](https://github.com/ManuelReyes-ITB2425/pro-asixc1b-g4/blob/90ebe3b9e4950c5c37deb1c8e7a7830f2482c180/proyecto/Fotos/serveis/BBDD/Captura%20de%20pantalla%20de%202025-05-26%2008-59-52.png)
 
 Totes les nostres taules tenen una gran quantitat de dades
 
