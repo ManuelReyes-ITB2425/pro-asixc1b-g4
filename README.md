@@ -4,21 +4,19 @@
 
 
 # INDEX
-[**Objectius del projecte: 2**](#_38xkcq3hwdcu)
+## Índex
+- [**Resum del projecte**](#resum-del-projecte)
+- [**1 Proposta de CPD**](#1-proposta-de-cpd)
+  - [1.1 Ubicació física](#11-ubicació-física)
+  - [1.2 Infraestructura IT](#12-infraestructura-it)
+  - [1.3 Infraestructura elèctrica](#13-infraestructura-elèctrica)
+  - [1.4 Seguretat Física](#14-seguretat-física)
+  - [1.5 Seguretat Lògica](#15-seguretat-lògica)
+  - [1.6 Implementació a AWS](#16-implementació-a-aws)
+  - [1.7 Comparació d’AWS amb altres proveïdors del núvol](#17-comparació-daws-amb-altres-proveïdors-del-núvol)
+- [**2 Sostenibilitat**](#2-sostenibilitat)
+- [**3 Serveis**](#3-serveis)
 
-[**Resum del projecte 2**](#_312satv3yjia)
-
-[**1.1 Ubicació física 3**](#_gkh25xf1rrzz)
-
-[**1.2 Infraestructura IT: 5**](#_s6wbo29ytur9)
-
-[**1.3 Infraestructura eléctrica: 8**](#_ql06ffml0x2n)
-
-[**1.4 Seguretat Física 14**](#_4kjavjq8m9zf)
-
-[**1.5 Seguretat Lògica 16**](#_3y36p8gugjk7)
-
-[**2 Serveis 27**](#_vt3rt4lbkp18)
 
 
 # Resum del projecte
