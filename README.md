@@ -591,6 +591,7 @@ Es poden configurar els equips de l'empresa, com ara els ordinadors, perquè s'a
 
 ## 1.6 Implementació a AWS
 
+**Servidor 3**
 ![server2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Audio-web-streaming.png)
 
 ## 1.7 Comparació d’AWS amb altres proveïdors del núvol
