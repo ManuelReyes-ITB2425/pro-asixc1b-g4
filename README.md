@@ -589,9 +589,11 @@ Per estalviar electricitat en la refrigeració, es pot aplicar el sistema de fre
 **Parada d’equips quan no hi ha càrrega:**  
 Es poden configurar els equips de l'empresa, com ara els ordinadors, perquè s'apaguin automàticament després d'un cert període d'inactivitat. Això redueix el consum innecessari fora de les hores de màxima activitat.
 
-## Implementació a AWS
+## 1.6 Implementació a AWS
 
-## Comparació d’AWS amb altres proveïdors del núvol
+![server2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Audio-web-streaming.png)
+
+## 1.7 Comparació d’AWS amb altres proveïdors del núvol
 
 | **Proveïdor** | **Eficiència Energètica i Sostenibilitat** | **Solucions de CPD Administrats** | **Cobertura dels Requeriments (seguretat, escalabilitat, sostenibilitat)** |
 | --- | --- | --- | --- |
