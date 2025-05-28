@@ -593,7 +593,7 @@ Es poden configurar els equips de l'empresa, com ara els ordinadors, perquè s'a
 
 **Servidor 3**
 ![server2](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Silvia%20Web/Audio-web-streaming.png)
-![serverA](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/ca9b3e692767034109ca11250539eac796a560e9/proyecto/Fotos/part%20teorica/Mario/AWS.png)
+![serverA](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/78c2ca8275d961e42828a75de5a6e4209477c865/proyecto/Fotos/part%20teorica/Mario/AWS2.png)
 
 ## 1.7 Comparació d’AWS amb altres proveïdors del núvol
 
