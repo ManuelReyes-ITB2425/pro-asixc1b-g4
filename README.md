@@ -62,6 +62,8 @@ També, hem de separar el cablejat a la instal·lació i distribuir-lo d’una m
 
 Per optimitzar la gestió del CPD, es disposarà de terra tècnic, que permetrà la canalització del cablejat i dels sistemes de climatització de forma segura i flexible. També el sostre tècnic, per facilitar la instal·lació d’equips de ventilació, il·luminació i distribució d’aire.
 
+Per últim, els racks per als servidors físics a Sant Cugat. Utilitzarem racks tancats, per tenir seguretat i control ambiental i d’accés. A la ubicació tindrem els racks necessaris per als 3 servidors en funcionament, amb un NAS a casa d’un treballador. Tots tenen patch panel per gestionar el cablejat, Routers i Switches.
+
 
 Organització cablejat:
 
