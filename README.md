@@ -885,3 +885,11 @@ Resultat final:
 
 ![usuaris](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Manel%20FTP/Captura%20de%20pantalla%20de%202025-05-22%2009-38-54.png)
 
+**Conclusió**
+El nostre desplegament del Centre de Processament de Dades al núvol no només respon a la demanda de contingut d'àudio i vídeo, sinó que ha establert una infraestructura digital completa. Hem implementat caracteristiques que garanteix la funcionalitat de tots els nostres serveis.
+
+S'ha verificat la qualitat del servei de transmissió d'àudio i vídeo mitjançant proves d'amplada de banda, confirmant la capacitat de l'arquitectura per gestionar càrregues elevades de contingut digital. La infraestructura implementada inclou una robusta xarxa de serveis com DNS, Active Directory (AD), Nginx per al servei web, bases de dades (BD) i un servidor SFTP per a la transferència segura de fitxers, que col·lectivament proporcionen la base per a una operació eficient i segura. A més, la incorporació d'eines de monitorització com Elasticsearch i Veyon assegura una supervisió contínua i una gestió proactiva de la infraestructura.
+
+Pel que fa a la seguretat, s'han aplicat mesures tant físiques com lògiques. La implementació de firewalls,còpies de seguretat redundants i RAIDs, juntament amb la monitorització constant, garanteix la protecció de les dades de clients i usuaris segons les normatives internacionals, reforçant així l'ODS 16
+
+Per acabar, destaquem el treball en equip i l'organització dels nostres companys, que a sigut molt necessaria per poder fer realitat aquest petit projecte. 
