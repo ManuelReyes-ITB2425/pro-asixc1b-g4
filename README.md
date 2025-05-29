@@ -43,7 +43,7 @@ El projecte s’alinea amb els Objectius de Desenvolupament Sostenible de l’Ag
 
 ## 1.1 Ubicació física
 
-En el nostre cas, la infraestructura física principal, que allotjarà els quatre servidors físics locals, estarà ubicada en una oficina a Sant Cugat, instal·lat en una planta intermèdia. Aquesta infraestructura es complementarà amb tres servidors addicionals ubicats al núvol, distribuïts estratègicament pels proveïdors de cloud per optimitzar el rendiment i garantir la seguretat de les dades.
+En el nostre cas, la infraestructura física principal, que allotjarà els 3 servidors físics locals, estarà ubicada en una oficina a Sant Cugat en carrer Rubí 102, instal·lat en una planta intermèdia. Aquesta infraestructura es complementarà amb tres servidors addicionals ubicats al núvol, distribuïts estratègicament pels proveïdors de cloud per optimitzar el rendiment i garantir la seguretat de les dades.
 
 Per tant, hem de tenir en compte la ubicació física dels nostres servidors per poder aplicar un sistema de climatització adaptat per a aquest lloc. Podem aplicar diferents sistemes per poder controlar-ho; aplicarem els sistemes HVAC, que s’encarregarà de controlar la temperatura, ventilació i qualitat de l’aire. A més, per millorar l’eficiència energètica, podem utilitzar sistemes de free-cooling si les condicions climàtiques locals ho permeten en certs períodes. Per als servidors al núvol, la climatització és gestionada directament pel proveïdor del servei.
 
