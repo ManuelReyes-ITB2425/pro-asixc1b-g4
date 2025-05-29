@@ -882,4 +882,4 @@ Resultat final:
 ![usuaris](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/serveis/Manel%20FTP/Captura%20de%20pantalla%20de%202025-05-22%2009-38-54.png)
 
 # 4 Video
-![Video demostració serveis](https://drive.google.com/drive/folders/1RDzDy_Q89W6cY9fpt5CzQgHM605t5c4c)
+![Video demostració serveis]([https://drive.google.com/drive/folders/1RDzDy_Q89W6cY9fpt5CzQgHM605t5c4c](https://drive.google.com/file/d/1E70rlhAja5hkUV_--WlMSpV2IukNyTt8/view?usp=sharing))
