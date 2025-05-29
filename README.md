@@ -785,6 +785,10 @@ Comprovació que des d'un client puc veure la base de dades i administrar-la.
 
 ![BD4](https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/main/proyecto/Fotos/part%20teorica/Silvia/Captura%20de%20pantalla%20de%202025-05-26%2009-46-05.png)
 
+Comprovació d'una consulta amb un usuari amb només permisos de select.
+
+![BD5](https://github.com/ManuelReyes-ITB2425/pro-asixc1b-g4/blob/87adfe0cce78b2c5b1278409bd31bdce4b533033/proyecto/Fotos/serveis/BBDD/Captura%20de%20pantalla%20de%202025-05-29%2008-53-50.png)
+
 **Monitoratge**
 
 Per al monitoratge dels nostres equips Linux i Windows utilitzarem Veyon, i per monitoritzar els recursos del servidor utilitzarem ELK Stack + Metricbeat.
