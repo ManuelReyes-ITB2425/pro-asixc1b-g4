@@ -136,7 +136,7 @@ La infraestructura requerirà un total de 4 servidors físics locals i 3 instàn
 
 Hem desplegat 3 instàncies virtuals al núvol, cada una corresponent a un dels servidors principals locals:
 
-- **Servidor Cloud 1**: Replica de Windows 1 (AD + BD + DNS)
+- **Servidor Cloud 1**: Replica de Windows 1 (AD + BD + Monitoratge)
 - **Servidor Cloud 2**: Replica de Windows 2 (FTP + DNS)  
 - **Servidor Cloud 3**: Replica del servidor Ubuntu (streaming, audio i web)
 - **Servidor Cloud 4:** Firewall
@@ -194,10 +194,10 @@ Per al dimensionament adequat dels Sistemes d'Alimentació Ininterrompuda (SAI),
   - Càrrega per al SAI A (via PSU1): 90 Watts
   - Càrrega per al SAI B (via PSU2): 90 Watts
 
-**Servidor Dell PowerEdge R250 (FTP + DNS Primari)**
+**Servidor Dell PowerEdge R250 (FTP + DNS)**
 
 - Consum Màxim Teòric del Servidor: S'estableix en 200 Watts. Factor de Càrrega Operativa Estimada (FCOE): 50% (0,50). Aquest factor es justifica per:
-  - Els serveis d'FTP i DNS Primari tenen una demanda de recursos generalment moderada.
+  - Els serveis d'FTP i DNS tenen una demanda de recursos generalment moderada.
   - Una càrrega del 50% sobre el màxim teòric es considera una estimació conservadora però adequada per a la seva operació contínua durant una contingència.
 - Càlcul del Consum Operatiu:
 
@@ -665,8 +665,8 @@ Es poden configurar els equips de l'empresa, com ara els ordinadors, perquè s'a
 **1\. Identificació dels Recursos Emprats:**
 
 - **Infraestructura Física Local (CPD de l'empresa):**
-  - **Servidor Windows 1 (AD + BD + DNS primari):** Dell PowerEdge R550 (Intel Xeon Silver 4310, 32GB RAM, 4x1TB SSD RAID10).
-  - **Servidor Windows 2 (FTP + DNS secundari):** Dell PowerEdge R250 (Intel Xeon Silver 4314, 32GB RAM, 2x480GB SSD RAID1).
+  - **Servidor Windows 1 (AD + BD + Monitoratge):** Dell PowerEdge R550 (Intel Xeon Silver 4310, 32GB RAM, 4x1TB SSD RAID10).
+  - **Servidor Windows 2 (FTP + DNS):** Dell PowerEdge R250 (Intel Xeon Silver 4314, 32GB RAM, 2x480GB SSD RAID1).
   - **Servidor Ubuntu (Audio + Streaming + Web):** Lenovo ThinkSystem SR630 (Intel Xeon Silver 4210R, 32GB RAM, 4x1TB SSD RAID10).
   - **Equipament de Xarxa Local:** Switch (24p GbE PoE, 4p SFP+), Patch Panel Lanberg. _(Router principal també al CPD, consum estimat prèviament)_.
   - **Infraestructura Elèctrica i Auxiliar CPD Local:** (Doble escomesa, SAIs, PDUs, HVAC - Daikin + Chilldyne, Sensors NetBotz – _els consums d'aquests ja estan detallats a la secció elèctrica_).
@@ -688,7 +688,7 @@ A continuació, es detalla l'estimació del consum energètic anual de la infrae
 - **Consum Energètic dels Equips de Tecnologies de la Informació (TI) al CPD:**\
   S'utilitzen els valors de consum operatiu per a cada component:
   - Servidor R550 (AD+BD+Monitoratge): 180 W
-  - Servidor R250 (FTP+DNS Primari): 100 W
+  - Servidor R250 (FTP+DNS): 100 W
   - Servidor SR630 (Ubuntu - Audio+Streaming+Web): 175 W
   - Switch HPE Aruba: 60 W
   - Router Ubiquiti ER-4: 11 W
