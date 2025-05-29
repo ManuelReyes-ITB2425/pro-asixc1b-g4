@@ -787,7 +787,7 @@ Comprovació que des d'un client puc veure la base de dades i administrar-la.
 
 Comprovació d'una consulta amb un usuari amb només permisos de select.
 
-![BD5](https://github.com/ManuelReyes-ITB2425/pro-asixc1b-g4/blob/87adfe0cce78b2c5b1278409bd31bdce4b533033/proyecto/Fotos/serveis/BBDD/Captura%20de%20pantalla%20de%202025-05-29%2008-53-50.png)
+![BD5](https://github.com/ManuelReyes-ITB2425/pro-asixc1b-g4/blob/4560a46ba898a3987981722d466b9aa99ff8ec3e/proyecto/Fotos/serveis/BBDD/Captura%20de%20pantalla%20de%202025-05-29%2008-58-29.png)
 
 **Monitoratge**
 
