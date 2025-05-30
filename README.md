@@ -304,7 +304,8 @@ t_a = (C_n * V_b_total * η_inv * DoD * f_p(I_d) * f_t(T) * f_e * f_c) / P_L
 - **Estimació de f_p(I_d) (Factor de Peukert per a Liti-ió):**\ L'efecte Peukert descriu la reducció de la capacitat efectiva d'una bateria a mesura que augmenta la taxa de descàrrega. Per a les bateries de liti-ió, aquest efecte és significativament menys pronunciat que per a les tradicionals de plom-àcid. Per a les taxes de descàrrega associades a autonomies en el rang de 15-60 minuts, s'estima un factor de Peukert de **0,95**. Això implica que s'espera poder utilitzar el 95% de la capacitat nominal de la bateria sota aquestes condicions, reflectint una pèrdua de només el 5% deguda a la rapidesa de la descàrrega.
 - **Càlcul de C_n (Capacitat Nominal Estimada de la Bateria):**
 
-[![]([https://github.com/ManuelReyes-ITB2425/Projecte-24-25/blob/1ffaa18b586d59a7f8ce43f405373e7ccbf8a8fe/proyecto/Fotos/part%20teorica/Gerson/image%20(1).png?raw=true](https://github.com/ManuelReyes-ITB2425/pro-asixc1b-g4/blob/main/proyecto/Fotos/part%20teorica/Gerson/image%20(1).png?raw=true))](https://github.com/ManuelReyes-ITB2425/pro-asixc1b-g4/blob/main/proyecto/Fotos/part%20teorica/Gerson/image%20(1).png?raw=true)
+[[![](https://github.com/ManuelReyes-ITB2425/pro-asixc1b-g4/blob/main/proyecto/Fotos/part%20teorica/Gerson/image%20(1).png?raw=true)
+
 Per estimar C_n, s'utilitzarà un punt de referència del gràfic d'autonomia proporcionat per APC per a l'SMTL1500RMI3UC: a una càrrega de P_L_ref = 350 W, el SAI ofereix una autonomia de t_a_ref = 21 minuts 50 segons.
 
 Convertim t_a_ref a hores: 21 minuts + (50/60) minuts = 21,8333 minuts.
